@@ -98,7 +98,7 @@ button {
     display: none;
     input {
       @include border-radius(24px);
-      border: 1px solid $basecolor;
+      border: 2px solid $basecolor;
       position: relative;
     }
   }
