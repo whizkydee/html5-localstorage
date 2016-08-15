@@ -553,14 +553,18 @@ p[data-localstorage] {
   cursor: default;
   color: #eee; }
 
-.edit h3 {
+.edit {
+  margin-bottom: 50px; }
+
+h3 {
   vertical-align: middle;
   letter-spacing: .03em;
   position: relative;
   margin: .3em 2px 0;
   font-weight: 300;
   display: inline; }
-.edit button[data-localstorage] {
+
+button {
   -webkit-transition: background 0.2s, box-shadow 0.2s, color 0.3s ease, border 0.2s ease-in;
   -moz-transition: background 0.2s, box-shadow 0.2s, color 0.3s ease, border 0.2s ease-in;
   -ms-transition: background 0.2s, box-shadow 0.2s, color 0.3s ease, border 0.2s ease-in;
@@ -582,7 +586,7 @@ p[data-localstorage] {
   font-weight: 300;
   font-size: .9em;
   outline: 0; }
-  .edit button[data-localstorage]:hover {
+  button:hover {
     -webkit-box-shadow: 5px 5px 10px 0px #c14f52;
     -moz-box-shadow: 5px 5px 10px 0px #c14f52;
     -ms-box-shadow: 5px 5px 10px 0px #c14f52;

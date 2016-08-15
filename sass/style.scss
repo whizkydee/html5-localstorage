@@ -63,34 +63,35 @@ p[data-localstorage] {
 }
 
 .edit {
-  h3 {
-    vertical-align: middle;
-    letter-spacing: .03em;
-    position: relative;
-    margin: .3em 2px 0;
-    font-weight: 300;
-    display: inline;
-  }
+  margin-bottom: 50px;
+}
+h3 {
+  vertical-align: middle;
+  letter-spacing: .03em;
+  position: relative;
+  margin: .3em 2px 0;
+  font-weight: 300;
+  display: inline;
+}
 
-  button[data-localstorage] {
-    @include transition(background, box-shadow, color .3s ease, border .2s ease-in);
-    @include border-radius(24px);
-    border: 2px solid #E53935;
-    font-family: $basefont;
-    letter-spacing: .05em;
-    background: #E53935;
-    position: relative;
-    text-align: center;
-    padding: .52em 1.1em;
-    color: $off_white;
-    font-weight: 300;
-    font-size: .9em;
-    outline: 0;
-    &:hover {
-      @include box-shadow(5px 5px 10px 0px rgba(193,79,82,1));
-      border: 2px solid $off_white;
-      background: $off_white;
-      color: #E53935;
-    }
+button {
+  @include transition(background, box-shadow, color .3s ease, border .2s ease-in);
+  @include border-radius(24px);
+  border: 2px solid #E53935;
+  font-family: $basefont;
+  letter-spacing: .05em;
+  background: #E53935;
+  position: relative;
+  text-align: center;
+  padding: .52em 1.1em;
+  color: $off_white;
+  font-weight: 300;
+  font-size: .9em;
+  outline: 0;
+  &:hover {
+    @include box-shadow(5px 5px 10px 0px rgba(193,79,82,1));
+    border: 2px solid $off_white;
+    background: $off_white;
+    color: #E53935;
   }
 }
