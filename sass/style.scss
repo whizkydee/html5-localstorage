@@ -94,4 +94,12 @@ button {
     background: $off_white;
     color: #E53935;
   }
+  .editor {
+    display: none;
+    input {
+      @include border-radius(24px);
+      border: 1px solid $basecolor;
+      position: relative;
+    }
+  }
 }
