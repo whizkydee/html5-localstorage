@@ -1,3 +1,11 @@
+@mixin transform($transform) {
+   -webkit-transform: $transform;
+   -moz-transform: $transform;
+   -ms-transform: $transform;
+   -o-transform: $transform;
+   transform: $transform;
+}
+
 @mixin transition($transitions...) {
   $unfoldedTransitions: ();
   @each $transition in $transitions {
