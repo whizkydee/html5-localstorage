@@ -67,6 +67,15 @@
   box-sizing: $value;
 }
 
+@mixin box-shadow($box-shadow) {
+   -webkit-box-shadow: $box-shadow;
+   -moz-box-shadow: $box-shadow;
+   -ms-box-shadow: $box-shadow;
+   -o-box-shadow: $box-shadow;
+   box-shadow: $box-shadow;
+}
+
+
 @mixin border-radius($radius: 2px) {
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
