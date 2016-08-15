@@ -49,6 +49,7 @@ h1[data-localstorage] {
   letter-spacing: .023em;
   position: relative;
   margin-bottom: 0;
+  cursor: default;
 }
 
 p[data-localstorage] {
@@ -57,6 +58,7 @@ p[data-localstorage] {
   position: relative;
   font-size: 1.09em;
   font-weight: 200;
+  cursor: default;
   color: #eee;
 }
 
@@ -71,7 +73,7 @@ p[data-localstorage] {
   }
 
   button[data-localstorage] {
-    @include transition(background, color .3s ease, border .2s ease-in);
+    @include transition(background, box-shadow, color .3s ease, border .2s ease-in);
     @include border-radius(24px);
     border: 2px solid #E53935;
     font-family: $basefont;

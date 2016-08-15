@@ -13,9 +13,8 @@ html {
    -webkit-text-size-adjust: $full;
    -ms-text-size-adjust: $full;
    font-family: $basefont;
-   overflow-y: scroll;
-   overflow-x: hidden;
    font-size: $full;
+   overflow: hidden;
    height: $full;
    width: $full;
    clear: both;
@@ -30,4 +29,25 @@ body {
    padding: 0em;
    width: $full;
    clear: both;
+}
+
+::selection {
+  background: lighten($basecolor, 9%);
+  color: $off_white;
+}
+::-webkit-selection {
+  background: lighten($basecolor, 9%);
+  color: $off_white;
+}
+::-moz-selection {
+  background: lighten($basecolor, 9%);
+  color: $off_white;
+}
+::-ms-selection {
+  background: lighten($basecolor, 9%);
+  color: $off_white;
+}
+::-o-selection {
+  background: lighten($basecolor, 9%);
+  color: $off_white;
 }

@@ -465,9 +465,8 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   font-family: "Montserrat", Calibri, "Trebuchet MS", Helvetica, Arial, georgia;
-  overflow-y: scroll;
-  overflow-x: hidden;
   font-size: 100%;
+  overflow: hidden;
   height: 100%;
   width: 100%;
   clear: both; }
@@ -481,6 +480,26 @@ body {
   padding: 0em;
   width: 100%;
   clear: both; }
+
+::selection {
+  background: #f66c62;
+  color: #f9f9f9; }
+
+::-webkit-selection {
+  background: #f66c62;
+  color: #f9f9f9; }
+
+::-moz-selection {
+  background: #f66c62;
+  color: #f9f9f9; }
+
+::-ms-selection {
+  background: #f66c62;
+  color: #f9f9f9; }
+
+::-o-selection {
+  background: #f66c62;
+  color: #f9f9f9; }
 
 @font-face {
   font-family: 'Montserrat';
@@ -522,14 +541,16 @@ body {
 h1[data-localstorage] {
   letter-spacing: .023em;
   position: relative;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  cursor: default; }
 
 p[data-localstorage] {
-  margin: .4em 0 .8em 0;
   letter-spacing: .012em;
+  margin: .4em 0 .8em 0;
   position: relative;
   font-size: 1.09em;
   font-weight: 200;
+  cursor: default;
   color: #eee; }
 
 .edit h3 {
@@ -540,11 +561,11 @@ p[data-localstorage] {
   font-weight: 300;
   display: inline; }
 .edit button[data-localstorage] {
-  -webkit-transition: background 0.2s, color 0.3s ease, border 0.2s ease-in;
-  -moz-transition: background 0.2s, color 0.3s ease, border 0.2s ease-in;
-  -ms-transition: background 0.2s, color 0.3s ease, border 0.2s ease-in;
-  -o-transition: background 0.2s, color 0.3s ease, border 0.2s ease-in;
-  transition: background 0.2s, color 0.3s ease, border 0.2s ease-in;
+  -webkit-transition: background 0.2s, box-shadow 0.2s, color 0.3s ease, border 0.2s ease-in;
+  -moz-transition: background 0.2s, box-shadow 0.2s, color 0.3s ease, border 0.2s ease-in;
+  -ms-transition: background 0.2s, box-shadow 0.2s, color 0.3s ease, border 0.2s ease-in;
+  -o-transition: background 0.2s, box-shadow 0.2s, color 0.3s ease, border 0.2s ease-in;
+  transition: background 0.2s, box-shadow 0.2s, color 0.3s ease, border 0.2s ease-in;
   -webkit-border-radius: 24px;
   -moz-border-radius: 24px;
   -ms-border-radius: 24px;
