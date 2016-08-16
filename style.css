@@ -596,14 +596,29 @@ button {
     background: #f9f9f9;
     color: #E53935; }
   button .editor {
-    display: none; }
+    position: absolute;
+    display: none;
+    left: 0;
+    top: 0; }
     button .editor input {
-      -webkit-border-radius: 24px;
-      -moz-border-radius: 24px;
-      -ms-border-radius: 24px;
-      -o-border-radius: 24px;
-      border-radius: 24px;
       border: 2px solid #F44336;
       position: relative; }
+
+button.clicked .editor {
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-border-radius: 50em;
+  -moz-border-radius: 50em;
+  -ms-border-radius: 50em;
+  -o-border-radius: 50em;
+  border-radius: 50em;
+  display: inline-block;
+  background: #fff;
+  padding: 12px 30px;
+  top: -133%;
+  left: 50%; }
 
 /*# sourceMappingURL=style.css.map */
