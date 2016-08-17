@@ -602,9 +602,10 @@ button {
     top: 0; }
     button .editor input {
       border: 2px solid #F44336;
-      position: relative; }
+      position: relative;
+      float: left; }
 
-button.clicked .editor {
+button.clicked .editor.clicked {
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -617,8 +618,42 @@ button.clicked .editor {
   border-radius: 50em;
   display: inline-block;
   background: #fff;
-  padding: 12px 30px;
+  padding: .9em 1em;
+  width: 15em;
   top: -133%;
   left: 50%; }
+  button.clicked .editor.clicked:before {
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    content: url(./icon_down.svg);
+    position: absolute;
+    text-align: center;
+    top: 3.57em;
+    left: 47%; }
+
+footer {
+  font-family: Calibri, Arial, sans-serif, serif;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  position: absolute;
+  font-weight: 100;
+  bottom: -10em;
+  left: 50%; }
+  footer * {
+    font-family: inherit;
+    color: #eee; }
+  footer section {
+    margin-bottom: 5px; }
+    footer section:last-child {
+      margin-bottom: 0; }
+    footer section a {
+      border-bottom: 1px dotted;
+      text-decoration: none; }
 
 /*# sourceMappingURL=style.css.map */
