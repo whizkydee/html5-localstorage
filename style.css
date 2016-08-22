@@ -521,22 +521,49 @@ body {
 @viewport {
   width: device-width; }
 body {
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
   -webkit-transition: background 1s linear;
   -moz-transition: background 1s linear;
   -ms-transition: background 1s linear;
   -o-transition: background 1s linear;
   transition: background 1s linear;
   background: #F44336;
+  color: #f9f9f9; }
+  body .main_page {
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 50%; }
+
+.github_fork a {
+  border: 0.2em solid #f66358;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  display: inline-block;
+  text-decoration: none;
+  background: #fff;
   position: absolute;
-  text-align: center;
-  color: #f9f9f9;
-  left: 50%;
-  top: 50%; }
+  padding: .5em 3em;
+  color: #F44336;
+  font-weight: bold;
+  cursor: pointer;
+  right: -65px;
+  top: 41px; }
+  .github_fork a:hover {
+    background: #f55a4e;
+    color: #fff; }
 
 h1[data-localstorage] {
   letter-spacing: .023em;

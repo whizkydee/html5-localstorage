@@ -35,14 +35,38 @@
 }
 
 body {
-  @include transform(translate(-50%, -50%));
   @include transition(background 1s linear);
   background: $basecolor;
-  position: absolute;
-  text-align: center;
   color: $off_white;
-  left: 50%;
-  top: 50%;
+  .main_page {
+    @include transform(translate(-50%, -50%));
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+  }
+}
+
+.github_fork {
+  a {
+    border: .2em solid lighten( (lighten( $basecolor, 2% )), 5%);
+    @include transition(all .25s ease);
+    @include transform(rotate(45deg));
+    display: inline-block;
+    text-decoration: none;
+    background: $white;
+    position: absolute;
+    padding: .5em 3em;
+    color: $basecolor;
+    font-weight: bold;
+    cursor: pointer;
+    right: -65px;
+    top: 41px;
+    &:hover {
+      background: lighten($basecolor, 5%);
+      color: $white;
+    }
+  }
 }
 
 h1[data-localstorage] {
