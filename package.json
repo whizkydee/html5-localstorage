@@ -1,0 +1,23 @@
+{
+  "name": "html5-localstorage",
+  "version": "1.0.0",
+  "description": "An awesome demo of the HTML5 localStorage API with CSS fun",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "edit"
+  },
+  "keywords": [
+    "html5",
+    "localstorage",
+    "api",
+    "cookies",
+    "with",
+    "javascript"
+  ],
+  "author": "Olaolu (whizkydee)",
+  "license": "MIT"
+}
