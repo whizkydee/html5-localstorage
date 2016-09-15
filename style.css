@@ -555,14 +555,14 @@ body {
   transform: rotate(45deg);
   display: inline-block;
   text-decoration: none;
-  padding: .5em 3em;
+  padding: .45em 3em;
   background: #fff;
   position: absolute;
   color: #F44336;
   font-weight: bold;
   cursor: pointer;
-  right: -67px;
-  top: 45px; }
+  right: -65px;
+  top: 47px; }
   .github_fork a:hover {
     border: 0.2em dotted #ea1c0d;
     background: #f55a4e;
@@ -574,7 +574,7 @@ h1[data-localstorage] {
   margin-bottom: 0;
   cursor: default; }
   h1[data-localstorage] .code {
-    font-family: "Ubuntu Mono";
+    font-family: 'Ubuntu Mono';
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
@@ -713,13 +713,19 @@ footer {
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  background: #f2f2f2;
+  background: #999;
   position: fixed;
   display: none;
   height: 228px;
   padding: 1em;
   left: 20%;
   top: 50%; }
+  .edit__modal > * {
+    text-align: center;
+    display: block; }
+  .edit__modal > input {
+    margin: 10px auto;
+    text-align: left; }
   .edit__modal.visible {
     display: block;
     width: 28%;

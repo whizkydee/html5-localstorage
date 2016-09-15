@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
         Set a `disabled` attribute on all the [data-localstorage] buttons
         when each button is clicked to launch the edit modal, to avoid
         multiple clicks resulting to modal errors.
-
       */
       for (let i = 0; i < btns.length; i++) {
         btns[i].setAttribute('disabled', '');
