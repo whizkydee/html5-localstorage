@@ -516,6 +516,11 @@ body {
   src: url("fonts/Montserrat-Thin.ttf") format("truetype");
   font-style: normal;
   font-weight: 200; }
+@font-face {
+  font-family: 'Ubuntu Mono';
+  src: url("fonts/UbuntuMono-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600; }
 body {
   -webkit-transition: background 1s linear;
   -moz-transition: background 1s linear;
@@ -537,7 +542,7 @@ body {
     top: 50%; }
 
 .github_fork a {
-  border: 0.2em solid #f66358;
+  border: 0.2em dotted #F44336;
   -webkit-transition: all 0.25s ease;
   -moz-transition: all 0.25s ease;
   -ms-transition: all 0.25s ease;
@@ -550,16 +555,16 @@ body {
   transform: rotate(45deg);
   display: inline-block;
   text-decoration: none;
+  padding: .5em 3em;
   background: #fff;
   position: absolute;
-  padding: .5em 3em;
   color: #F44336;
   font-weight: bold;
   cursor: pointer;
-  right: -65px;
+  right: -67px;
   top: 45px; }
   .github_fork a:hover {
-    border: 0.2em dotted #f9f9f9;
+    border: 0.2em dotted #ea1c0d;
     background: #f55a4e;
     color: #fff; }
 

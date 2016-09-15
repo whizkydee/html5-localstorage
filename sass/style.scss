@@ -27,6 +27,13 @@
   font-weight: 200;
 }
 
+@font-face {
+  font-family: 'Ubuntu Mono';
+  src: url('fonts/UbuntuMono-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 600;
+}
+
 body {
   @include transition(background 1s linear);
   background: $basecolor;
@@ -43,21 +50,21 @@ body {
 
 .github_fork {
   a {
-    border: .2em solid lighten( (lighten( $basecolor, 2% )), 5%);
+    border: .2em dotted $basecolor;
     @include transition(all .25s ease);
     @include transform(rotate(45deg));
     display: inline-block;
     text-decoration: none;
+    padding: .5em 3em;
     background: $white;
     position: absolute;
-    padding: .5em 3em;
     color: $basecolor;
     font-weight: bold;
     cursor: pointer;
-    right: -65px;
+    right: -67px;
     top: 45px;
     &:hover {
-      border: .2em dotted $off_white;
+      border: .2em dotted darken($basecolor, 10%);
       background: lighten($basecolor, 5%);
       color: $white;
     }
