@@ -27,13 +27,6 @@
   font-weight: 200;
 }
 
-@-ms-viewport {
-   width: device-width;
-}
-@viewport {
-   width: device-width;
-}
-
 body {
   @include transition(background 1s linear);
   background: $basecolor;
@@ -42,6 +35,7 @@ body {
     @include transform(translate(-50%, -50%));
     position: absolute;
     text-align: center;
+    width: 60%;
     left: 50%;
     top: 50%;
   }
@@ -173,5 +167,23 @@ footer {
       border-bottom: 1px dotted;
       text-decoration: none;
     }
+  }
+}
+
+.edit__modal {
+  @include box-shadow(5px 5px 210px 0px #c14f52);
+  @include transform(translate(-50%, -50%));
+  @include transition(all .5s ease);
+  background: #f2f2f2;
+  position: fixed;
+  display: none;
+  height: 228px;
+  padding: 1em;
+  left: 20%;
+  top: 50%;
+  &.visible {
+    display: block;
+    width: 28%;
+    left: 50%;
   }
 }

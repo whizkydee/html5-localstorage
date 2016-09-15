@@ -516,10 +516,6 @@ body {
   src: url("fonts/Montserrat-Thin.ttf") format("truetype");
   font-style: normal;
   font-weight: 200; }
-@-ms-viewport {
-  width: device-width; }
-@viewport {
-  width: device-width; }
 body {
   -webkit-transition: background 1s linear;
   -moz-transition: background 1s linear;
@@ -536,6 +532,7 @@ body {
     transform: translate(-50%, -50%);
     position: absolute;
     text-align: center;
+    width: 60%;
     left: 50%;
     top: 50%; }
 
@@ -682,5 +679,33 @@ footer {
     footer section a {
       border-bottom: 1px dotted;
       text-decoration: none; }
+
+.edit__modal {
+  -webkit-box-shadow: 5px 5px 210px 0px #c14f52;
+  -moz-box-shadow: 5px 5px 210px 0px #c14f52;
+  -ms-box-shadow: 5px 5px 210px 0px #c14f52;
+  -o-box-shadow: 5px 5px 210px 0px #c14f52;
+  box-shadow: 5px 5px 210px 0px #c14f52;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background: #f2f2f2;
+  position: fixed;
+  display: none;
+  height: 228px;
+  padding: 1em;
+  left: 20%;
+  top: 50%; }
+  .edit__modal.visible {
+    display: block;
+    width: 28%;
+    left: 50%; }
 
 /*# sourceMappingURL=style.css.map */
