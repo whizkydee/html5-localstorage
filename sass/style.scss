@@ -55,8 +55,9 @@ body {
     font-weight: bold;
     cursor: pointer;
     right: -65px;
-    top: 41px;
+    top: 45px;
     &:hover {
+      border: .2em dotted $off_white;
       background: lighten($basecolor, 5%);
       color: $white;
     }
@@ -68,6 +69,14 @@ h1[data-localstorage] {
   position: relative;
   margin-bottom: 0;
   cursor: default;
+  .code {
+    font-family: "Ubuntu Mono";
+    @include border-radius(3px);
+    background: #E8F5F2;
+    color: $basecolor;
+    font-size: .95em;
+    padding: 5px 7px;
+  }
 }
 
 p[data-localstorage] {
