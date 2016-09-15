@@ -22,15 +22,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Define variables to set modal title based on the innertext of the button clicked
       let modalTitleElem = document.querySelector('.edit__modal > h3');
-      let modalTitle = modalTitleElem.innertext;
-      let btnText = btns[i].innertext;
+      let modalTitle = modalTitleElem.innerText;
+      let btnText = btns[i].innerText;
 
       // Check if modal does not have a `visible` class, then add `visible` class
       if (false === modal.classList.contains('visible'))
         modal.classList.add('visible');
 
       // Set modal title based on the innertext of the button clicked
-      modalTitleElem.innertext = `${modalTitle} ${btnText}`;
+      modalTitleElem.innerText = `${modalTitle} ${btnText}`;
 
     });
   }
