@@ -17,11 +17,11 @@
     <section class="edit">
       <h3>Edit:</h3>
 
-      <button data-localstorage>Font</button>
-      <button data-localstorage>Background</button>
-      <button data-localstorage>Color</button>
-      <button data-localstorage>Heading</button>
-      <button data-localstorage>Text</button>
+      <button type="button" data-localstorage>Font</button>
+      <button type="button" data-localstorage>Background</button>
+      <button type="button" data-localstorage>Color</button>
+      <button type="button" data-localstorage>Heading</button>
+      <button type="button" data-localstorage>Text</button>
     </section>
 
     <button id="clear">Clear all</button>
@@ -40,5 +40,17 @@
 
   </section>
 
+  <div class="edit__modal">
+    <h3>Edit</h3>
+    <span class="edit_text"></span>
+    <input type="text" />
+
+    <section class="modal_actions">
+      <button type="button">Save</button>
+      <button type="button">Discard</button>
+
+      <button type="button">Reset</button>
+    </section>
+  </div>
 </body>
 </html>
