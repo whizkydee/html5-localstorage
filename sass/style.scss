@@ -7,24 +7,10 @@
   './includes/base';
 
 @font-face {
-	font-family: 'Montserrat';
-	src: url('fonts/Montserrat-Regular.ttf') format('truetype');
+	font-family: 'Acme';
+	src: url('fonts/Acme-Regular.ttf') format('truetype');
 	font-style: normal;
   font-weight: 400;
-}
-
-@font-face {
-	font-family: 'Montserrat';
-	src: url('fonts/Montserrat-Light.ttf') format('truetype');
-	font-style: normal;
-  font-weight: 300;
-}
-
-@font-face {
-	font-family: 'Montserrat';
-	src: url('fonts/Montserrat-Thin.ttf') format('truetype');
-	font-style: normal;
-  font-weight: 200;
 }
 
 @font-face {
@@ -61,8 +47,8 @@ body {
     color: $basecolor;
     font-weight: bold;
     cursor: pointer;
-    right: -65px;
-    top: 47px;
+    right: -62px;
+    top: 45px;
     &:hover {
       border: .2em dotted darken($basecolor, 10%);
       background: lighten($basecolor, 5%);
@@ -87,7 +73,7 @@ h1[data-localstorage] {
 }
 
 p[data-localstorage] {
-  letter-spacing: .012em;
+  letter-spacing: .032em;
   margin: .4em 0 .8em 0;
   position: relative;
   font-size: 1.09em;
@@ -101,7 +87,7 @@ p[data-localstorage] {
 }
 h3 {
   vertical-align: middle;
-  letter-spacing: .03em;
+  letter-spacing: .05em;
   position: relative;
   margin: .3em 2px 0;
   font-weight: 300;
@@ -113,11 +99,11 @@ button {
   @include border-radius(24px);
   border: 2px solid #E53935;
   font-family: $basefont;
-  letter-spacing: .05em;
+  letter-spacing: .07em;
+  padding: .43em 1.2em;
   background: #E53935;
   position: relative;
   text-align: center;
-  padding: .52em 1.1em;
   color: $off_white;
   font-weight: 300;
   font-size: .9em;
@@ -140,28 +126,6 @@ button {
     }
   }
 }
-
-button.clicked {
-  .editor.clicked {
-    @include transform(translate(-50%, -50%));
-    @include border-radius(50em);
-    display: inline-block;
-    background: $white;
-    padding: .9em 1em;
-    width: 15em;
-    top: -133%;
-    left: 50%;
-    &:before {
-      @include transform(translate(0, -50%));
-      content: url(./icon_down.svg);
-      position: absolute;
-      text-align: center;
-      top: 3.57em;
-      left: 47%;
-    }
-  }
-}
-
 
 footer {
   font-family: Calibri, Arial, sans-serif, serif;
