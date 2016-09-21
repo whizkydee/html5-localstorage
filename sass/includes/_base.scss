@@ -1,9 +1,10 @@
 * {
    font-family: $basefont;
-   @include box-sizing();
+   @include box-sizing;
+   outline: 0;
    &:before,
    &:after {
-      @include box-sizing();
+      @include box-sizing;
    }
 }
 
@@ -12,8 +13,7 @@ html {
    -moz-osx-font-smoothing: grayscale;
    -webkit-text-size-adjust: $full;
    -ms-text-size-adjust: $full;
-   font-family: $basefont;
-   font-size: 17px;
+   font-size: 16px;
    overflow: hidden;
    height: $full;
    width: $full;

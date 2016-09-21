@@ -17,19 +17,65 @@
     <section class="edit">
       <h3>Edit:</h3>
 
-      <button type="button" data-localstorage>Font</button>
-      <button type="button" data-localstorage>Background</button>
-      <button type="button" data-localstorage>Color</button>
-      <button type="button" data-localstorage>Heading</button>
-      <button type="button" data-localstorage>Text</button>
+      <button
+        type="button"
+        data-localstorage
+        data-desc="This controls the base <span>font-family</span> and <span>font-size</span>"
+        data-label-1="Font Family"
+        data-label-2="Font Size">
+        Font
+      </button>
+
+      <button
+        type="button"
+        data-localstorage
+        data-desc="This controls the <span>background</span> of the <span>body</span> element"
+        data-label-1="Background">
+        Background
+      </button>
+
+      <button
+        type="button"
+        data-localstorage
+        data-desc="This controls the <span>color</span> of all text on the page"
+        data-label-1="Color">
+        Color
+      </button>
+
+      <button
+        type="button"
+        data-localstorage
+        data-desc="This modifies the text of the heading and paragraph"
+        data-label-1="Heading"
+        data-label-2="Paragraph">
+        Text
+      </button>
+
+      <button
+        type="button"
+        data-localstorage
+        data-desc="This controls the <span>background</span> and <span>:hover</span> of the buttons"
+        data-label-1="Button Background"
+        data-label-2="Button Hover Background">
+        Button
+      </button>
     </section>
 
-    <button id="clear">Clear all</button>
+    <button id="clear">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
+      <path d="M341,128V99c0-19.1-14.5-35-34.5-35H205.4C185.5,64,171,79.9,171,99v29H80v32h9.2c0,0,5.4,0.6,8.2,3.4c2.8,2.8,3.9,9,3.9,9
+      	l19,241.7c1.5,29.4,1.5,33.9,36,33.9h199.4c34.5,0,34.5-4.4,36-33.8l19-241.6c0,0,1.1-6.3,3.9-9.1c2.8-2.8,8.2-3.4,8.2-3.4h9.2v-32
+      	h-91V128z M192,99c0-9.6,7.8-15,17.7-15h91.7c9.9,0,18.6,5.5,18.6,15v29H192V99z M183.5,384l-10.3-192h20.3L204,384H183.5z
+      	 M267.1,384h-22V192h22V384z M328.7,384h-20.4l10.5-192h20.3L328.7,384z"/>
+      </svg>
+
+      Clear all
+    </button>
 
     <footer>
       <section>
-        Designed with <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" height="12" viewBox="0 0 64 64">
-        <path d="M47.199 4c-6.727 0-12.516 5.472-15.198 11.188-2.684-5.715-8.474-11.188-15.201-11.188-9.274 0-16.8 7.527-16.8 16.802 0 18.865 19.031 23.812 32.001 42.464 12.26-18.536 31.999-24.2 31.999-42.464 0-9.274-7.527-16.802-16.801-16.802z" fill="#ffffff"></path>
+        Designed with <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+        <path d="M47.199 4c-6.727 0-12.516 5.472-15.198 11.188-2.684-5.715-8.474-11.188-15.201-11.188-9.274 0-16.8 7.527-16.8 16.802 0 18.865 19.031 23.812 32.001 42.464 12.26-18.536 31.999-24.2 31.999-42.464 0-9.274-7.527-16.802-16.801-16.802z"></path>
       </svg> by <a href="https://github.com/whizkydee">Olaolu.</a>
       </section>
 
@@ -41,17 +87,29 @@
   </section>
 
   <div class="edit__modal">
-    <h3>Edit</h3>
+    <h3></h3>
     <span class="edit_text"></span>
-    <input type="text" />
+    <button id="close_modal">
+      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M 10.050,23.95c 0.39,0.39, 1.024,0.39, 1.414,0L 17,18.414l 5.536,5.536c 0.39,0.39, 1.024,0.39, 1.414,0 c 0.39-0.39, 0.39-1.024,0-1.414L 18.414,17l 5.536-5.536c 0.39-0.39, 0.39-1.024,0-1.414c-0.39-0.39-1.024-0.39-1.414,0 L 17,15.586L 11.464,10.050c-0.39-0.39-1.024-0.39-1.414,0c-0.39,0.39-0.39,1.024,0,1.414L 15.586,17l-5.536,5.536 C 9.66,22.926, 9.66,23.56, 10.050,23.95z"></path></g></svg>
+    </button>
 
     <section class="modal_actions">
-      <button type="button">Save</button>
-      <button type="button">Discard</button>
+      <label for="input1"></label>
+      <input type="text" id="input1" />
 
-      <button type="button">Reset</button>
+      <label for="input2"></label>
+      <input type="text" id="input2" />
+
+      <button type="button" id="save">Save</button>
+
+      <button type="button" id="reset">Reset</button>
     </section>
   </div>
+
+  <script type="text/javascript" charset="utf-8">
+    /* Disable scroll */
+    var keys = {37: 1, 39: 1}; function preventDefault(e) { e = e || window.event; if (e.preventDefault) e.preventDefault(); e.returnValue = false; } function preventDefaultForScrollKeys(e) { if (keys[e.keyCode]) { preventDefault(e); return false; } } function disableScroll() { if (window.addEventListener) window.addEventListener('DOMMouseScroll', preventDefault, false); window.onwheel = preventDefault; window.onmousewheel = document.onmousewheel = preventDefault; window.ontouchmove  = preventDefault; document.onkeydown  = preventDefaultForScrollKeys; } disableScroll();
+  </script>
 
 </body>
 </html>

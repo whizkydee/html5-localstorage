@@ -7,23 +7,38 @@
   './includes/base';
 
 @font-face {
-	font-family: 'Acme';
-	src: url('fonts/Acme-Regular.ttf') format('truetype');
-	font-style: normal;
+  font-family: 'Super Pro';
+  src: url('fonts/SourceSansPro-Light.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Super Pro';
+  src: url('fonts/SourceSansPro-Regular.ttf') format('truetype');
+  font-style: normal;
   font-weight: 400;
 }
 
 @font-face {
-  font-family: 'Ubuntu Mono';
-  src: url('fonts/UbuntuMono-Bold.ttf') format('truetype');
+  font-family: 'Super Pro';
+  src: url('fonts/SourceSansPro-Bold.ttf') format('truetype');
   font-style: normal;
   font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Ubuntu Mono';
+  src: url('fonts/UbuntuMono-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
 }
 
 body {
   @include transition(background 1s linear);
   background: $basecolor;
   color: $off_white;
+  height: $full;
   .main_page {
     @include transform(translate(-50%, -50%));
     position: absolute;
@@ -47,8 +62,8 @@ body {
     color: $basecolor;
     font-weight: bold;
     cursor: pointer;
-    right: -62px;
-    top: 45px;
+    right: -53px;
+    top: 43px;
     &:hover {
       border: .2em dotted darken($basecolor, 10%);
       background: lighten($basecolor, 5%);
@@ -63,11 +78,12 @@ h1[data-localstorage] {
   margin-bottom: 0;
   cursor: default;
   .code {
-    font-family: 'Ubuntu Mono';
+    font-family: $code_font;
+    @include calc(vertical-align, 10%);
     @include border-radius(3px);
     background: #E8F5F2;
     color: $basecolor;
-    font-size: .95em;
+    font-size: .75em;
     padding: 5px 7px;
   }
 }
@@ -85,31 +101,32 @@ p[data-localstorage] {
 .edit {
   margin-bottom: 40px;
 }
+
 h3 {
   vertical-align: middle;
   letter-spacing: .05em;
   position: relative;
   margin: .3em 2px 0;
-  font-weight: 300;
+  font-weight: 500;
   display: inline;
 }
 
-button {
+.main_page button {
   @include transition(background, box-shadow, color .3s ease, border .2s ease-in);
-  @include border-radius(24px);
+  @include border-radius(2px);
   border: 2px solid #E53935;
-  font-family: $basefont;
-  letter-spacing: .07em;
-  padding: .43em 1.2em;
+  letter-spacing: .05em;
+  font-family: inherit;
   background: #E53935;
+  font-weight: normal;
+  padding: .32em 1em;
   position: relative;
   text-align: center;
   color: $off_white;
-  font-weight: 300;
-  font-size: .9em;
+  font-size: .9rem;
   outline: 0;
   &:hover {
-    @include box-shadow(5px 5px 10px 0px rgba(193,79,82,1));
+    @include box-shadow(5px 5px 10px 0px rgba(193, 79, 82, 1));
     border: 2px solid $off_white;
     background: $off_white;
     color: #E53935;
@@ -127,8 +144,24 @@ button {
   }
 }
 
+button#clear {
+  position: relative;
+  svg {
+    @include calc(vertical-align, -25%);
+    @include transition(none);
+    height: 20px;
+    width: 17px;
+    fill: #fff;
+  }
+  &:hover {
+    svg {
+      fill: currentColor;
+    }
+  }
+}
+
 footer {
-  font-family: Calibri, Arial, sans-serif, serif;
+  font-family: $basefont;
   @include transform(translate(-50%, 0));
   position: absolute;
   font-weight: 100;
@@ -147,33 +180,134 @@ footer {
       border-bottom: 1px dotted;
       text-decoration: none;
     }
+    svg {
+      height: 12px;
+      width: 15px;
+      fill: #fff;
+    }
   }
 }
 
 .edit__modal {
-  @include box-shadow(5px 5px 210px 0px #c14f52);
+  @include transition(top, visibility .12s ease-in, box-shadow .5s ease .15s);
   @include transform(translate(-50%, -50%));
-  @include transition(all .5s ease);
-  background: #999;
+  @include border-radius(2px);
+  background: #e2e2e2;
+  visibility: hidden;
+  min-height: 228px;
   position: fixed;
-  display: none;
-  height: 228px;
   padding: 1em;
-  left: 20%;
-  top: 50%;
-  > {
-    * {
-      text-align: center;
-      display: block;
+  width: 29%;
+  left: 50%;
+  top: 0%;
+  &.visible {
+    @include box-shadow(0px 0px 10px 20px rgba(0, 0, 0, .06));
+    visibility: visible;
+    top: 50%;
+    #close_modal svg {
+      width: 22px;
     }
-    input {
-      margin: 10px auto;
-      text-align: left;
+    // Hide the second label and input by default
+    .modal_actions {
+      label[for="input2"],
+      input#input2 {
+        display: none;
+      }
+    }
+    // Show the second label and input for specific buttons
+    &#font_edit,
+    &#text_edit,
+    &#button_edit {
+      .modal_actions {
+        label[for="input2"],
+        input#input2 {
+          display: block;
+        }
+      }
+    }
+
+  }
+  > * {
+    text-align: center;
+    display: block;
+  }
+  h3 {
+    margin-bottom: 7px;
+    color: #3f5261;
+  }
+  .edit_text {
+    font-family: $basefont;
+    font-size: .9rem;
+    font-weight: 400;
+    color: #7d7d7d;
+    > span {
+      font-family: $code_font;
+      @include border-radius(3px);
+      background: #E8F5F2;
+      font-size: .75rem;
+      padding: 5px 7px;
+      color: #6699cc;
     }
   }
-  &.visible {
+  #close_modal {
+    background-color: transparent;
+    @include border-radius(100%);
+    display: inline-block;
+    position: absolute;
+    height: 30px;
+    width: 31px;
+    border: 0;
+    left: 91%;
+    top: 1px;
+    &:hover {
+      svg {
+        @include transform(scale(1.3));
+      }
+    }
+    svg {
+      @include transition(transform, width .4s ease .2s);
+      margin: 1px -22px;
+      height: 27px;
+      width: 0px;
+      fill: #000;
+    }
+  }
+}
+
+.modal_actions {
+  margin-top: 15px;
+  label {
+    color: darken(#7d7d7d, 10%);
+    margin-left: 25px;
+    font-size: .9rem;
+    text-align: left;
     display: block;
-    width: 28%;
-    left: 50%;
+  }
+  input {
+    @include transition(border .3s ease);
+    @include border-radius(3px);
+    margin: 0 auto 12px;
+    border-style: solid;
+    border-color: #fff;
+    border-width: 2px;
+    padding: 5px 10px;
+    text-align: left;
+    font-size: .8rem;
+    width: 85%;
+    &:focus {
+      border-color: #6699cc;
+    }
+  }
+  button {
+    @include transition(background .3s ease-out);
+    font-family: $basefont;
+    background: #C9C9C9;
+    padding: 5px 60px;
+    color: $off_white;
+    border: 0 none;
+    color: #3f5261;
+    &:hover {
+      background: darken(#C9C9C9, 5%);
+    }
   }
 }
