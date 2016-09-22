@@ -79,7 +79,7 @@ h1[data-localstorage] {
   cursor: default;
   .code {
     font-family: $code_font;
-    @include calc(vertical-align, 10%);
+    @include calc(vertical-align, 5%);
     @include border-radius(3px);
     background: #E8F5F2;
     color: $basecolor;

@@ -65,12 +65,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Reset the modal title to `Edit` if it already has a title inherited
         // from the button clicked
-        if (modalTitleElem.innerText !== 'Edit')
+        if ('Edit' !== modalTitleElem.innerText)
           modalTitleElem.innerText = 'Edit';
 
         // Reset the modal description to an empty string if it already has a
         // description inherited from the [data-desc] attr of the button clicked
-        if (modalDescElem.innerHTML !== '')
+        if ('' !== modalDescElem.innerHTML)
           modalDescElem.innerHTML = '';
 
         // If the modal has an `id` attribute, remove it

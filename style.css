@@ -576,9 +576,9 @@ h1[data-localstorage] {
   cursor: default; }
   h1[data-localstorage] .code {
     font-family: "Ubuntu Mono", Consolas, Menlo, Monaco, monospace;
-    vertical-align: -webkit-calc(10%);
-    vertical-align: -moz-calc(10%);
-    vertical-align: calc(10%);
+    vertical-align: -webkit-calc(5%);
+    vertical-align: -moz-calc(5%);
+    vertical-align: calc(5%);
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
