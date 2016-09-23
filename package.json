@@ -2,22 +2,24 @@
   "name": "html5-localstorage",
   "version": "1.0.0",
   "description": "An awesome demo of the HTML5 localStorage API with CSS fun",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "main": "dist/script.js",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-preset-es2015": "^6.14.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0"
   },
   "repository": {
     "type": "git",
-    "url": "edit"
+    "url": "https://github.com/whizkydee/html5-localstorage.git"
   },
-  "keywords": [
-    "html5",
-    "localstorage",
-    "api",
-    "cookies",
-    "with",
-    "javascript"
-  ],
-  "author": "Olaolu (whizkydee)",
-  "license": "MIT"
+  "keywords": [],
+  "author": "Olaolu Olawuyi",
+  "bugs": {
+    "url": "https://github.com/whizkydee/html5-localstorage/issues"
+  },
+  "homepage": "https://github.com/whizkydee/html5-localstorage#readme"
 }

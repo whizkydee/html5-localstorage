@@ -29,17 +29,10 @@
       <button
         type="button"
         data-localstorage
-        data-desc="This controls the <span>background</span> of the <span>body</span> element"
-        data-label-1="Background">
-        Background
-      </button>
-
-      <button
-        type="button"
-        data-localstorage
-        data-desc="This controls the <span>color</span> of all text on the page"
-        data-label-1="Color">
-        Color
+        data-desc="This controls the text <span>color</span> and the <span>body</span> background"
+        data-label-1="Text Color"
+        data-label-2="Body Background">
+        Colors
       </button>
 
       <button
@@ -57,7 +50,15 @@
         data-desc="This controls the <span>background</span> and <span>:hover</span> of the buttons"
         data-label-1="Button Background"
         data-label-2="Button Hover Background">
-        Button
+        Buttons
+      </button>
+
+      <button
+        type="button"
+        data-localstorage
+        data-desc="This controls the global styles of all elements on the page"
+        data-label-1="Choose a theme...">
+        Theme
       </button>
     </section>
 
@@ -100,9 +101,18 @@
       <label for="input2"></label>
       <input type="text" id="input2" />
 
-      <button type="button" id="save">Save</button>
+      <section id="theme_selector">
+        <label for="teal">Teal<input type="radio" id="teal" checked /></label>
+        <label for="tomato">Tomato<input type="radio" id="tomato" /></label>
+        <label for="blue">Blue<input type="radio" id="blue" /></label>
+        <label for="custom">Custom<input type="radio" id="custom" /></label>
+      </section>
 
-      <button type="button" id="reset">Reset</button>
+      <section id="two_actions">
+        <button type="button" id="save">Save</button>
+
+        <button type="button" id="reset">Reset</button>
+      </section>
     </section>
   </div>
 

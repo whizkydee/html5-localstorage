@@ -7,21 +7,21 @@
   './includes/base';
 
 @font-face {
-  font-family: 'Super Pro';
+  font-family: 'Not Source Sans Pro';
   src: url('fonts/SourceSansPro-Light.ttf') format('truetype');
   font-style: normal;
   font-weight: 200;
 }
 
 @font-face {
-  font-family: 'Super Pro';
+  font-family: 'Not Source Sans Pro';
   src: url('fonts/SourceSansPro-Regular.ttf') format('truetype');
   font-style: normal;
   font-weight: 400;
 }
 
 @font-face {
-  font-family: 'Super Pro';
+  font-family: 'Not Source Sans Pro';
   src: url('fonts/SourceSansPro-Bold.ttf') format('truetype');
   font-style: normal;
   font-weight: 600;
@@ -65,7 +65,7 @@ body {
     right: -53px;
     top: 43px;
     &:hover {
-      border: .2em dotted darken($basecolor, 10%);
+      border: .2em dotted darken($basecolor, 5%);
       background: lighten($basecolor, 5%);
       color: $white;
     }
@@ -114,10 +114,10 @@ h3 {
 .main_page button {
   @include transition(background, box-shadow, color .3s ease, border .2s ease-in);
   @include border-radius(2px);
-  border: 2px solid #E53935;
+  border: 2px solid #21A1A1;
   letter-spacing: .05em;
   font-family: inherit;
-  background: #E53935;
+  background: #21A1A1;
   font-weight: normal;
   padding: .32em 1em;
   position: relative;
@@ -126,10 +126,10 @@ h3 {
   font-size: .9rem;
   outline: 0;
   &:hover {
-    @include box-shadow(5px 5px 10px 0px rgba(193, 79, 82, 1));
+    @include box-shadow(5px 5px 10px 0px #21A1A1);
     border: 2px solid $off_white;
     background: $off_white;
-    color: #E53935;
+    color: #21A1A1;
   }
   .editor {
     position: absolute;
@@ -209,7 +209,7 @@ footer {
     }
     // Hide the second label and input by default
     .modal_actions {
-      label[for="input2"],
+      label[for='input2'],
       input#input2 {
         display: none;
       }
@@ -217,15 +217,33 @@ footer {
     // Show the second label and input for specific buttons
     &#font_edit,
     &#text_edit,
-    &#button_edit {
+    &#colors_edit,
+    &#buttons_edit {
       .modal_actions {
-        label[for="input2"],
+        label[for='input2'],
         input#input2 {
           display: block;
         }
       }
     }
-
+    // Hide the inputs and label 1 if the button is `Theme`
+    &#theme_edit {
+      .modal_actions {
+        input[type='text'],
+        label[for='input2'] {
+          display: none;
+        }
+        // Show the theme selector if the modal is `#theme_edit`
+        #theme_selector {
+          padding: 15px 0;
+          display: block;
+          label {
+            display: inline-block;
+            position: relative;
+          }
+        }
+      }
+    }
   }
   > * {
     text-align: center;
@@ -242,11 +260,13 @@ footer {
     color: #7d7d7d;
     > span {
       font-family: $code_font;
-      @include border-radius(3px);
+      @include calc(vertical-align, 10%);
+      @include border-radius(2px);
+      letter-spacing: .03em;
       background: #E8F5F2;
-      font-size: .75rem;
-      padding: 5px 7px;
+      font-size: .7rem;
       color: #6699cc;
+      padding: 5px;
     }
   }
   #close_modal {
@@ -265,7 +285,7 @@ footer {
       }
     }
     svg {
-      @include transition(transform, width .4s ease .2s);
+      @include transition(transform, width .4s ease .3s);
       margin: 1px -22px;
       height: 27px;
       width: 0px;
@@ -278,10 +298,13 @@ footer {
   margin-top: 15px;
   label {
     color: darken(#7d7d7d, 10%);
-    margin-left: 25px;
     font-size: .9rem;
-    text-align: left;
     display: block;
+    &[for='input1'],
+    &[for='input2'] {
+      margin-left: 25px;
+      text-align: left;
+    }
   }
   input {
     @include transition(border .3s ease);
@@ -298,16 +321,24 @@ footer {
       border-color: #6699cc;
     }
   }
-  button {
-    @include transition(background .3s ease-out);
-    font-family: $basefont;
-    background: #C9C9C9;
-    padding: 5px 60px;
-    color: $off_white;
-    border: 0 none;
-    color: #3f5261;
-    &:hover {
-      background: darken(#C9C9C9, 5%);
-    }
+  // Hide the theme selector by default
+  #theme_selector {
+    position: relative;
+    display: none;
+  }
+  #two_actions {
+    display: block;
+    button {
+     @include transition(background .3s ease-out);
+     font-family: $basefont;
+     background: #C9C9C9;
+     padding: 5px 60px;
+     color: $off_white;
+     border: 0 none;
+     color: #3f5261;
+     &:hover {
+       background: darken(#C9C9C9, 5%);
+     }
+   }
   }
 }
