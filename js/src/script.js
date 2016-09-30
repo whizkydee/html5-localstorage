@@ -11,8 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // having a `disabled` attribute when the page is reloaded, therefore making
   // the buttons inaccessible.
   for (let i = 0; i < btns.length; i++) {
-    if (true === btns[i].hasAttribute('disabled'))
-      btns[i].removeAttribute('disabled');
+    if (true === btns[i].hasAttribute('disabled')) btns[i].removeAttribute('disabled');
   }
 
   // Begin loop for [data-localstorage] buttons
@@ -32,8 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
       let btnText = btns[i].innerText;
 
       // If the modal does not have a `visible` class, add a `visible` class
-      if (false === modal.classList.contains('visible'))
-        modal.classList.add('visible');
+      if (false === modal.classList.contains('visible')) modal.classList.add('visible');
 
       // Add an `id` to the modal based on the button clicked
       let btnTextLower = btnText.toLowerCase();
@@ -68,8 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Define function to exit the modal
       function exitModal() {
         // If the modal has a `visible` class, remove it
-        if (true === modal.classList.contains('visible'))
-          modal.classList.remove('visible');
+        if (true === modal.classList.contains('visible')) modal.classList.remove('visible');
 
         for (let i = 0; i < btns.length; i++) {
           // If the buttons have a `disabled` attribute, remove it
@@ -115,8 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // when `esc` key is clicked, then exit the modal
       document.addEventListener('keydown', e => {
         if (modal.classList.contains('visible')) {
-          if (27 === e.keyCode)
-            exitModal();
+          if (27 === e.keyCode) exitModal();
         }
       }, false);
 
