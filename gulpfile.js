@@ -29,4 +29,6 @@ gulp.task('watch', function() {
   gulp.watch(sassSrc, ['sass']);
 });
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['watch'], function () {
+  gulp.start('transpile', 'sass');
+});
