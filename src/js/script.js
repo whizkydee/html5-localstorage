@@ -6,16 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const btns = document.querySelectorAll('.edit > button');
   const modal = document.querySelector('.edit__modal');
 
-  // Before doing anything, check first if [data-localstorage] buttons have
-  // a `disabled` attribute, then remove it. This prevents the buttons from
-  // having a `disabled` attribute when the page is reloaded, therefore making
-  // the buttons inaccessible.
-  for (let i = 0; i < btns.length; i++) {
-    if (true === btns[i].hasAttribute('disabled')) btns[i].removeAttribute('disabled');
-  }
-
   // Begin loop for [data-localstorage] buttons
   for (let i = 0; i < btns.length; i++) {
+    // Before doing anything, check first if [data-localstorage] buttons have
+    // a `disabled` attribute, then remove it. This prevents the buttons from
+    // having a `disabled` attribute when the page is reloaded, therefore making
+    // the buttons inaccessible.
+    if (true === btns[i].hasAttribute('disabled')) btns[i].removeAttribute('disabled');
+
     // Function to launch the edit modal and + some other stuff
     function launchModal() {
       // Set a `disabled` attribute on all the [data-localstorage] buttons
@@ -54,14 +52,19 @@ document.addEventListener('DOMContentLoaded', () => {
       let themeSelector = document.getElementById('theme_selector');
       let labels = document.querySelectorAll('#theme_selector > label > input');
 
+      function toggleChecked() {
+        for (let i = 0; i < labels.length; i++) {
+          if (labels[i].hasAttribute('checked')) {
+              labels[i].removeAttribute('checked');
+          } else {
+            labels[i].setAttribute('checked', '');
+          }
+        }
+      }
+
       for (let i = 0; i < labels.length; i++) {
         labels[i].addEventListener('click', function() {
-          if (labels[i].hasAttribute('checked')) {
-            labels[i].removeAttribute('checked');
-          } else {
-            this.setAttribute('checked', '');
-          }
-
+          toggleChecked();
         }, false);
       }
 
@@ -113,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Add a keydown event listener to the document to detect
       // when `esc` key is clicked, then exit the modal
       document.addEventListener('keydown', e => {
-        if (modal.classList.contains('visible')) {
+        if (true === modal.classList.contains('visible')) {
           if (27 === e.keyCode) exitModal();
         }
       }, false);
@@ -131,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Get the [data-label-1, data-label-2] attributes of each button
       let dataLabel1 = btns[i].getAttribute('data-label-1');
-      let dataLabel2 = (btns[i].hasAttribute('data-label-2')) ? btns[i].getAttribute('data-label-2') : '';
+      let dataLabel2 = (btns[i].hasAttribute('data-label-2')) ? btns[i].getAttribute('data-label-2') : null;
 
       // Set the innerText of the label element based on the [dataLabel1, dataLabel2] attributes of the buttons
       labelElem1.innerText = dataLabel1;

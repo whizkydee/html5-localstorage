@@ -8,30 +8,28 @@ document.addEventListener('DOMContentLoaded', function () {
   var btns = document.querySelectorAll('.edit > button');
   var modal = document.querySelector('.edit__modal');
 
-  // Before doing anything, check first if [data-localstorage] buttons have
-  // a `disabled` attribute, then remove it. This prevents the buttons from
-  // having a `disabled` attribute when the page is reloaded, therefore making
-  // the buttons inaccessible.
-  for (var i = 0; i < btns.length; i++) {
-    if (true === btns[i].hasAttribute('disabled')) btns[i].removeAttribute('disabled');
-  }
-
   // Begin loop for [data-localstorage] buttons
 
-  var _loop = function _loop(_i) {
+  var _loop = function _loop(i) {
+    // Before doing anything, check first if [data-localstorage] buttons have
+    // a `disabled` attribute, then remove it. This prevents the buttons from
+    // having a `disabled` attribute when the page is reloaded, therefore making
+    // the buttons inaccessible.
+    if (true === btns[i].hasAttribute('disabled')) btns[i].removeAttribute('disabled');
+
     // Function to launch the edit modal and + some other stuff
     function launchModal() {
       // Set a `disabled` attribute on all the [data-localstorage] buttons
       // when each button is clicked to launch the edit modal, to avoid
       // multiple clicks resulting to modal errors.
-      for (var _i2 = 0; _i2 < btns.length; _i2++) {
-        btns[_i2].setAttribute('disabled', '');
+      for (var _i = 0; _i < btns.length; _i++) {
+        btns[_i].setAttribute('disabled', '');
       }
 
       // Define variables to set modal title based on the innerText of the button clicked
       var modalTitleElem = document.querySelector('.edit__modal > h3');
       var modalTitle = modalTitleElem.innerText;
-      var btnText = btns[_i].innerText;
+      var btnText = btns[i].innerText;
 
       // If the modal does not have a `visible` class, add a `visible` class
       if (false === modal.classList.contains('visible')) modal.classList.add('visible');
@@ -47,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // Define variables to set modal description based on the [data-desc] of the button clicked
       var modalDescElem = document.querySelector('.edit__modal > .edit_text');
       var modalDesc = modalDescElem.innerText;
-      var btnDesc = btns[_i].getAttribute('data-desc');
+      var btnDesc = btns[i].getAttribute('data-desc');
 
       // Set modal description based on the innerText of the button clicked
       modalDescElem.innerHTML = '' + btnDesc;
@@ -57,18 +55,20 @@ document.addEventListener('DOMContentLoaded', function () {
       var themeSelector = document.getElementById('theme_selector');
       var labels = document.querySelectorAll('#theme_selector > label > input');
 
-      var _loop2 = function _loop2(_i3) {
-        labels[_i3].addEventListener('click', function () {
-          if (labels[_i3].hasAttribute('checked')) {
-            labels[_i3].removeAttribute('checked');
+      function toggleChecked() {
+        for (var _i2 = 0; _i2 < labels.length; _i2++) {
+          if (labels[_i2].hasAttribute('checked')) {
+            labels[_i2].removeAttribute('checked');
           } else {
-            this.setAttribute('checked', '');
+            labels[_i2].setAttribute('checked', '');
           }
-        }, false);
-      };
+        }
+      }
 
       for (var _i3 = 0; _i3 < labels.length; _i3++) {
-        _loop2(_i3);
+        labels[_i3].addEventListener('click', function () {
+          toggleChecked();
+        }, false);
       }
 
       // Define function to exit the modal
@@ -117,14 +117,14 @@ document.addEventListener('DOMContentLoaded', function () {
       // Add a keydown event listener to the document to detect
       // when `esc` key is clicked, then exit the modal
       document.addEventListener('keydown', function (e) {
-        if (modal.classList.contains('visible')) {
+        if (true === modal.classList.contains('visible')) {
           if (27 === e.keyCode) exitModal();
         }
       }, false);
     }
 
     // Add a `click` event listener to all [data-localstorage] buttons and do some stuff
-    btns[_i].addEventListener('click', function () {
+    btns[i].addEventListener('click', function () {
       launchModal();
 
       // Get all elements need to set the label for the inputs
@@ -133,8 +133,8 @@ document.addEventListener('DOMContentLoaded', function () {
       var labelElem2 = document.querySelector('label[for="input2"]');
 
       // Get the [data-label-1, data-label-2] attributes of each button
-      var dataLabel1 = btns[_i].getAttribute('data-label-1');
-      var dataLabel2 = btns[_i].hasAttribute('data-label-2') ? btns[_i].getAttribute('data-label-2') : '';
+      var dataLabel1 = btns[i].getAttribute('data-label-1');
+      var dataLabel2 = btns[i].hasAttribute('data-label-2') ? btns[i].getAttribute('data-label-2') : null;
 
       // Set the innerText of the label element based on the [dataLabel1, dataLabel2] attributes of the buttons
       labelElem1.innerText = dataLabel1;
@@ -142,8 +142,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }, false);
   };
 
-  for (var _i = 0; _i < btns.length; _i++) {
-    _loop(_i);
+  for (var i = 0; i < btns.length; i++) {
+    _loop(i);
   }
 }, false);
 //# sourceMappingURL=script.js.map
