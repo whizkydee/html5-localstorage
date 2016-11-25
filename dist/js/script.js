@@ -11,17 +11,21 @@ document.addEventListener('DOMContentLoaded', function () {
   // Begin loop for [data-localstorage] buttons
 
   var _loop = function _loop(i) {
-    // Before doing anything, check first if [data-localstorage] buttons have
-    // a `disabled` attribute, then remove it. This prevents the buttons from
-    // having a `disabled` attribute when the page is reloaded, therefore making
-    // the buttons inaccessible.
+    /**
+     * Before doing anything, check first if [data-localstorage] buttons have
+     * a `disabled` attribute, then remove it. This prevents the buttons from
+     * having a `disabled` attribute when the page is reloaded, therefore making
+     * the buttons inaccessible.
+     */
     if (true === btns[i].hasAttribute('disabled')) btns[i].removeAttribute('disabled');
 
     // Function to launch the edit modal and + some other stuff
     function launchModal() {
-      // Set a `disabled` attribute on all the [data-localstorage] buttons
-      // when each button is clicked to launch the edit modal, to avoid
-      // multiple clicks resulting to modal errors.
+      /**
+       * Set a `disabled` attribute on all the [data-localstorage] buttons
+       * when each button is clicked to launch the edit modal, to avoid
+       * multiple clicks resulting to modal errors.
+       */
       for (var _i = 0; _i < btns.length; _i++) {
         btns[_i].setAttribute('disabled', '');
       }
@@ -55,44 +59,34 @@ document.addEventListener('DOMContentLoaded', function () {
       var themeSelector = document.getElementById('theme_selector');
       var labels = document.querySelectorAll('#theme_selector > label > input');
 
-      function toggleChecked() {
-        for (var _i2 = 0; _i2 < labels.length; _i2++) {
-          if (labels[_i2].hasAttribute('checked')) {
-            labels[_i2].removeAttribute('checked');
-          } else {
-            labels[_i2].setAttribute('checked', '');
-          }
-        }
-      }
-
-      for (var _i3 = 0; _i3 < labels.length; _i3++) {
-        labels[_i3].addEventListener('click', function () {
-          toggleChecked();
-        }, false);
-      }
-
       // Define function to exit the modal
       function exitModal() {
         // If the modal has a `visible` class, remove it
         if (true === modal.classList.contains('visible')) modal.classList.remove('visible');
 
-        for (var _i4 = 0; _i4 < btns.length; _i4++) {
+        for (var _i2 = 0; _i2 < btns.length; _i2++) {
           // If the buttons have a `disabled` attribute, remove it
-          if (true === btns[_i4].hasAttribute('disabled')) btns[_i4].removeAttribute('disabled');
+          if (true === btns[_i2].hasAttribute('disabled')) btns[_i2].removeAttribute('disabled');
         }
 
-        // Reset the modal title to `Edit` if it already has a title inherited
-        // from the button clicked within a timeout of .120 seconds
-        if ('Edit' !== modalTitleElem.innerText) {
+        /**
+         * Reset the modal title to `Edit` if it already has a title inherited
+         * from the button clicked within a timeout of .120 seconds
+         */
+
+        if (-1 === modalTitleElem.innerText.indexOf('Edit')) {
           setTimeout(function () {
             modalTitleElem.innerText = 'Edit';
           }, 120);
         }
 
-        // Reset the modal description to an empty string if it already has a
-        // description inherited from the [data-desc] attr of the button clicked
-        // within a timeout of .120 seconds
-        if ('' !== modalDescElem.innerHTML) {
+        /**
+         * Reset the modal description to an empty string if it already has a
+         * description inherited from the [data-desc] attr of the button clicked
+         * within a timeout of .120 seconds
+         */
+
+        if (-1 === modalDescElem.innerHTML.indexOf('')) {
           setTimeout(function () {
             modalDescElem.innerHTML = '';
           }, 120);
@@ -114,8 +108,10 @@ document.addEventListener('DOMContentLoaded', function () {
         exitModal();
       }, false);
 
-      // Add a keydown event listener to the document to detect
-      // when `esc` key is clicked, then exit the modal
+      /**
+       * Add a keydown event listener to the document to detect
+       * when `esc` key is clicked, then exit the modal
+       */
       document.addEventListener('keydown', function (e) {
         if (true === modal.classList.contains('visible')) {
           if (27 === e.keyCode) exitModal();

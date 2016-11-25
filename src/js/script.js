@@ -8,17 +8,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Begin loop for [data-localstorage] buttons
   for (let i = 0; i < btns.length; i++) {
-    // Before doing anything, check first if [data-localstorage] buttons have
-    // a `disabled` attribute, then remove it. This prevents the buttons from
-    // having a `disabled` attribute when the page is reloaded, therefore making
-    // the buttons inaccessible.
+    /**
+     * Before doing anything, check first if [data-localstorage] buttons have
+     * a `disabled` attribute, then remove it. This prevents the buttons from
+     * having a `disabled` attribute when the page is reloaded, therefore making
+     * the buttons inaccessible.
+     */
     if (true === btns[i].hasAttribute('disabled')) btns[i].removeAttribute('disabled');
 
     // Function to launch the edit modal and + some other stuff
     function launchModal() {
-      // Set a `disabled` attribute on all the [data-localstorage] buttons
-      // when each button is clicked to launch the edit modal, to avoid
-      // multiple clicks resulting to modal errors.
+      /**
+       * Set a `disabled` attribute on all the [data-localstorage] buttons
+       * when each button is clicked to launch the edit modal, to avoid
+       * multiple clicks resulting to modal errors.
+       */
       for (let i = 0; i < btns.length; i++) {
         btns[i].setAttribute('disabled', '');
       }
@@ -52,22 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
       let themeSelector = document.getElementById('theme_selector');
       let labels = document.querySelectorAll('#theme_selector > label > input');
 
-      function toggleChecked() {
-        for (let i = 0; i < labels.length; i++) {
-          if (labels[i].hasAttribute('checked')) {
-              labels[i].removeAttribute('checked');
-          } else {
-            labels[i].setAttribute('checked', '');
-          }
-        }
-      }
-
-      for (let i = 0; i < labels.length; i++) {
-        labels[i].addEventListener('click', function() {
-          toggleChecked();
-        }, false);
-      }
-
       // Define function to exit the modal
       function exitModal() {
         // If the modal has a `visible` class, remove it
@@ -79,18 +67,24 @@ document.addEventListener('DOMContentLoaded', () => {
             btns[i].removeAttribute('disabled');
         }
 
-        // Reset the modal title to `Edit` if it already has a title inherited
-        // from the button clicked within a timeout of .120 seconds
-        if ('Edit' !== modalTitleElem.innerText) {
+        /**
+         * Reset the modal title to `Edit` if it already has a title inherited
+         * from the button clicked within a timeout of .120 seconds
+         */
+
+        if (-1 === modalTitleElem.innerText.indexOf('Edit')) {
           setTimeout(() => {
             modalTitleElem.innerText = 'Edit';
           }, 120);
         }
 
-        // Reset the modal description to an empty string if it already has a
-        // description inherited from the [data-desc] attr of the button clicked
-        // within a timeout of .120 seconds
-        if ('' !== modalDescElem.innerHTML) {
+        /**
+         * Reset the modal description to an empty string if it already has a
+         * description inherited from the [data-desc] attr of the button clicked
+         * within a timeout of .120 seconds
+         */
+
+        if (-1 === modalDescElem.innerHTML.indexOf('')) {
           setTimeout(() => {
             modalDescElem.innerHTML = '';
           }, 120);
@@ -113,8 +107,10 @@ document.addEventListener('DOMContentLoaded', () => {
         exitModal();
       }, false);
 
-      // Add a keydown event listener to the document to detect
-      // when `esc` key is clicked, then exit the modal
+      /**
+       * Add a keydown event listener to the document to detect
+       * when `esc` key is clicked, then exit the modal
+       */
       document.addEventListener('keydown', e => {
         if (true === modal.classList.contains('visible')) {
           if (27 === e.keyCode) exitModal();
