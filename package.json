@@ -2,7 +2,7 @@
   "name": "html5-localstorage",
   "version": "1.0.0",
   "description": "An awesome demo of the HTML5 localStorage API with CSS fun",
-  "main": "dist/script.js",
+  "main": "src/script.js",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
