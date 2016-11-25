@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const modal = document.querySelector('.edit__modal');
 
   // Begin loop for [data-localstorage] buttons
-  for (let i = 0; i < btns.length; i++) {
+  const loop = i => {
     /**
      * Before doing anything, check first if [data-localstorage] buttons have
      * a `disabled` attribute, then remove it. This prevents the buttons from
@@ -138,5 +138,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }, false);
 
+  };
+
+  for (let i = 0; i < btns.length; i++) {
+    loop(i);
   }
+
 }, false);

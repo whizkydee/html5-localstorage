@@ -9,8 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var modal = document.querySelector('.edit__modal');
 
   // Begin loop for [data-localstorage] buttons
-
-  var _loop = function _loop(i) {
+  var loop = function loop(i) {
     /**
      * Before doing anything, check first if [data-localstorage] buttons have
      * a `disabled` attribute, then remove it. This prevents the buttons from
@@ -139,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   for (var i = 0; i < btns.length; i++) {
-    _loop(i);
+    loop(i);
   }
 }, false);
 //# sourceMappingURL=script.js.map
