@@ -501,9 +501,6 @@ body {
   background: #51cbcb;
   color: #f9f9f9; }
 
-/* ==========================================================================
-   Variables
-   ========================================================================== */
 @font-face {
   font-family: 'Not Source Sans Pro';
   src: url("../../fonts/SourceSansPro-Light.ttf") format("truetype");
