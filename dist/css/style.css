@@ -70,7 +70,7 @@ button,
 input,
 select,
 textarea {
-  font-family: sans-serif; }
+  font-family: inherit; }
 
 /**
 * Address margins handled incorrectly in IE 6/7.
@@ -501,6 +501,9 @@ body {
   background: #51cbcb;
   color: #f9f9f9; }
 
+/* ==========================================================================
+   Variables
+   ========================================================================== */
 @font-face {
   font-family: 'Not Source Sans Pro';
   src: url("../../fonts/SourceSansPro-Light.ttf") format("truetype");
@@ -718,7 +721,7 @@ footer {
   min-height: 228px;
   position: fixed;
   padding: 1em;
-  width: 29%;
+  width: 396px;
   left: 50%;
   top: 0%; }
   .edit__modal.visible {
@@ -746,9 +749,15 @@ footer {
     .edit__modal.visible#theme_edit .modal_actions #theme_selector {
       padding: 15px 0;
       display: block; }
-      .edit__modal.visible#theme_edit .modal_actions #theme_selector label {
-        display: inline-block;
-        position: relative; }
+      .edit__modal.visible#theme_edit .modal_actions #theme_selector button[data-localstorage] {
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
+        border-radius: 3px;
+        padding: 10px 20px;
+        position: relative;
+        border: 0 none; }
   .edit__modal > * {
     text-align: center;
     display: block; }

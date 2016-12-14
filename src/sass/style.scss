@@ -4,7 +4,8 @@
   './includes/normalize',
   './includes/variables',
   './includes/mixins',
-  './includes/base';
+  './includes/base',
+  './includes/palette';
 
 @font-face {
   font-family: 'Not Source Sans Pro';
@@ -197,7 +198,7 @@ footer {
   min-height: 228px;
   position: fixed;
   padding: 1em;
-  width: 29%;
+  width: 396px;
   left: 50%;
   top: 0%;
   &.visible {
@@ -237,9 +238,12 @@ footer {
         #theme_selector {
           padding: 15px 0;
           display: block;
-          label {
-            display: inline-block;
+          button[data-localstorage] {
+            @include border-radius(3px);
+            // background: linear-gradient(#37B7B7, #1F9898);
+            padding: 10px 20px;
             position: relative;
+            border: 0 none;
           }
         }
       }
