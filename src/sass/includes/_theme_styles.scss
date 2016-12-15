@@ -2,6 +2,22 @@ body {
   &.teal {
     background: $teal_base;
 
+    ::selection {
+      background: lighten($teal_base, 9%);
+    }
+    ::-webkit-selection {
+      background: lighten($teal_base, 9%);
+    }
+    ::-moz-selection {
+      background: lighten($teal_base, 9%);
+    }
+    ::-ms-selection {
+      background: lighten($teal_base, 9%);
+    }
+    ::-o-selection {
+      background: lighten($teal_base, 9%);
+    }
+    
     .github_fork a {
       border-color: $teal_base;
       color: $teal_base;
@@ -40,6 +56,22 @@ body {
 
   &.tomato {
     background: $tomato_base;
+
+    ::selection {
+      background: lighten($tomato_base, 9%);
+    }
+    ::-webkit-selection {
+      background: lighten($tomato_base, 9%);
+    }
+    ::-moz-selection {
+      background: lighten($tomato_base, 9%);
+    }
+    ::-ms-selection {
+      background: lighten($tomato_base, 9%);
+    }
+    ::-o-selection {
+      background: lighten($tomato_base, 9%);
+    }
 
     .github_fork a {
       border-color: $tomato_base;
@@ -80,6 +112,22 @@ body {
   &.blue {
     background: $blue_base;
 
+    ::selection {
+      background: lighten($blue_base, 9%);
+    }
+    ::-webkit-selection {
+      background: lighten($blue_base, 9%);
+    }
+    ::-moz-selection {
+      background: lighten($blue_base, 9%);
+    }
+    ::-ms-selection {
+      background: lighten($blue_base, 9%);
+    }
+    ::-o-selection {
+      background: lighten($blue_base, 9%);
+    }
+
     .github_fork a {
       border-color: $blue_base;
       color: $blue_base;
@@ -118,6 +166,22 @@ body {
 
   &.blueviolet {
     background: $blueviolet_base;
+
+    ::selection {
+      background: lighten($blueviolet_base, 9%);
+    }
+    ::-webkit-selection {
+      background: lighten($blueviolet_base, 9%);
+    }
+    ::-moz-selection {
+      background: lighten($blueviolet_base, 9%);
+    }
+    ::-ms-selection {
+      background: lighten($blueviolet_base, 9%);
+    }
+    ::-o-selection {
+      background: lighten($blueviolet_base, 9%);
+    }
 
     .github_fork a {
       border-color: $blueviolet_base;
