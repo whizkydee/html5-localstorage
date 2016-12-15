@@ -2,10 +2,10 @@
 
 @import
   './includes/normalize',
+  './includes/palette',
   './includes/variables',
   './includes/mixins',
   './includes/base',
-  './includes/palette',
   './includes/theme_styles';
 
 @font-face {
@@ -339,17 +339,17 @@ body {
     #two_actions {
       display: block;
       button {
-       @include transition(background .3s ease-out);
-       font-family: $basefont;
-       background: #C9C9C9;
-       padding: 5px 60px;
-       color: $off_white;
-       border: 0 none;
-       color: #3f5261;
-       &:hover {
-         background: darken(#C9C9C9, 5%);
-       }
-     }
+        @include transition(background .3s ease-out);
+        font-family: $basefont;
+        background: #C9C9C9;
+        padding: 5px 60px;
+        color: $off_white;
+        border: 0 none;
+        color: #3f5261;
+        &:hover {
+          background: darken(#C9C9C9, 5%);
+        }
+      }
     }
   }
 
