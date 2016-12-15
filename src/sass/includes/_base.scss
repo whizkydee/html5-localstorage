@@ -31,23 +31,23 @@ body {
    clear: both;
 }
 
-::selection {
-  background: lighten($basecolor, 9%);
+body ::selection {
+  background: lighten($teal_base, 9%);
   color: $off_white;
 }
-::-webkit-selection {
-  background: lighten($basecolor, 9%);
+body ::-webkit-selection {
+  background: lighten($teal_base, 9%);
   color: $off_white;
 }
-::-moz-selection {
-  background: lighten($basecolor, 9%);
+body ::-moz-selection {
+  background: lighten($teal_base, 9%);
   color: $off_white;
 }
-::-ms-selection {
-  background: lighten($basecolor, 9%);
+body ::-ms-selection {
+  background: lighten($teal_base, 9%);
   color: $off_white;
 }
-::-o-selection {
-  background: lighten($basecolor, 9%);
+body ::-o-selection {
+  background: lighten($teal_base, 9%);
   color: $off_white;
 }

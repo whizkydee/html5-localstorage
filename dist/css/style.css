@@ -481,28 +481,38 @@ body {
   width: 100%;
   clear: both; }
 
-::selection {
+body ::selection {
   background: #51cbcb;
   color: #f9f9f9; }
 
-::-webkit-selection {
+body ::-webkit-selection {
   background: #51cbcb;
   color: #f9f9f9; }
 
-::-moz-selection {
+body ::-moz-selection {
   background: #51cbcb;
   color: #f9f9f9; }
 
-::-ms-selection {
+body ::-ms-selection {
   background: #51cbcb;
   color: #f9f9f9; }
 
-::-o-selection {
+body ::-o-selection {
   background: #51cbcb;
   color: #f9f9f9; }
 
 body.teal {
   background: #37B7B7; }
+  body.teal ::selection {
+    background: #51cbcb; }
+  body.teal ::-webkit-selection {
+    background: #51cbcb; }
+  body.teal ::-moz-selection {
+    background: #51cbcb; }
+  body.teal ::-ms-selection {
+    background: #51cbcb; }
+  body.teal ::-o-selection {
+    background: #51cbcb; }
   body.teal .github_fork a {
     border-color: #37B7B7;
     color: #37B7B7; }
@@ -536,6 +546,16 @@ body.teal {
 
 body.tomato {
   background: #E94444; }
+  body.tomato ::selection {
+    background: #ee6d6d; }
+  body.tomato ::-webkit-selection {
+    background: #ee6d6d; }
+  body.tomato ::-moz-selection {
+    background: #ee6d6d; }
+  body.tomato ::-ms-selection {
+    background: #ee6d6d; }
+  body.tomato ::-o-selection {
+    background: #ee6d6d; }
   body.tomato .github_fork a {
     border-color: #E94444;
     color: #E94444; }
@@ -569,6 +589,16 @@ body.tomato {
 
 body.blue {
   background: #169AE1; }
+  body.blue ::selection {
+    background: #39adec; }
+  body.blue ::-webkit-selection {
+    background: #39adec; }
+  body.blue ::-moz-selection {
+    background: #39adec; }
+  body.blue ::-ms-selection {
+    background: #39adec; }
+  body.blue ::-o-selection {
+    background: #39adec; }
   body.blue .github_fork a {
     border-color: #169AE1;
     color: #169AE1; }
@@ -602,6 +632,16 @@ body.blue {
 
 body.blueviolet {
   background: #8a2be2; }
+  body.blueviolet ::selection {
+    background: #a053e8; }
+  body.blueviolet ::-webkit-selection {
+    background: #a053e8; }
+  body.blueviolet ::-moz-selection {
+    background: #a053e8; }
+  body.blueviolet ::-ms-selection {
+    background: #a053e8; }
+  body.blueviolet ::-o-selection {
+    background: #a053e8; }
   body.blueviolet .github_fork a {
     border-color: #8a2be2;
     color: #8a2be2; }
