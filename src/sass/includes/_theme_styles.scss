@@ -1,0 +1,157 @@
+body {
+  &.teal {
+    background: $teal_base;
+
+    .github_fork a {
+      border-color: $teal_base;
+      color: $teal_base;
+      &:hover {
+        border-color: darken($teal_base, 5%);
+        background: lighten($teal_base, 5%);
+      }
+    }
+
+    h1[data-localstorage] .code {
+      color: $teal_base;
+    }
+
+    .main_page button {
+      border-color: $teal_dark;
+      background: $teal_dark;
+      &:hover {
+        @include box-shadow(5px 5px 10px 0px $teal_dark);
+        color: $teal_dark;
+      }
+      &.outset {
+        border-color: $teal_outset;
+        background: $teal_outset;
+        &:hover {
+          @include box-shadow(5px 5px 10px 0px $teal_outset);
+          color: $teal_outset;
+        }
+      }
+    }
+
+    .editor input {
+      border-color: $teal_base;
+    }
+  }
+
+
+  &.tomato {
+    background: $tomato_base;
+
+    .github_fork a {
+      border-color: $tomato_base;
+      color: $tomato_base;
+      &:hover {
+        border-color: darken($tomato_base, 5%);
+        background: lighten($tomato_base, 5%);
+      }
+    }
+
+    h1[data-localstorage] .code {
+      color: $tomato_base;
+    }
+
+    .main_page button {
+      border-color: $tomato_dark;
+      background: $tomato_dark;
+      &:hover {
+        @include box-shadow(5px 5px 10px 0px $tomato_dark);
+        color: $tomato_dark;
+      }
+      &.outset {
+        border-color: $tomato_outset;
+        background: $tomato_outset;
+        &:hover {
+          @include box-shadow(5px 5px 10px 0px $tomato_outset);
+          color: $tomato_outset;
+        }
+      }
+    }
+
+    .editor input {
+      border-color: $tomato_base;
+    }
+  }
+
+
+  &.blue {
+    background: $blue_base;
+
+    .github_fork a {
+      border-color: $blue_base;
+      color: $blue_base;
+      &:hover {
+        border-color: darken($blue_base, 5%);
+        background: lighten($blue_base, 5%);
+      }
+    }
+
+    h1[data-localstorage] .code {
+      color: $blue_base;
+    }
+
+    .main_page button {
+      border-color: $blue_dark;
+      background: $blue_dark;
+      &:hover {
+        @include box-shadow(5px 5px 10px 0px $blue_dark);
+        color: $blue_dark;
+      }
+      &.outset {
+        border-color: $blue_outset;
+        background: $blue_outset;
+        &:hover {
+          @include box-shadow(5px 5px 10px 0px $blue_outset);
+          color: $blue_outset;
+        }
+      }
+    }
+
+    .editor input {
+      border-color: $blue_base;
+    }
+  }
+
+
+  &.blueviolet {
+    background: $blueviolet_base;
+
+    .github_fork a {
+      border-color: $blueviolet_base;
+      color: $blueviolet_base;
+      &:hover {
+        border-color: darken($blueviolet_base, 5%);
+        background: lighten($blueviolet_base, 5%);
+      }
+    }
+
+    h1[data-localstorage] .code {
+      color: $blueviolet_base;
+    }
+
+    .main_page button {
+      border-color: $blueviolet_dark;
+      background: $blueviolet_dark;
+      &:hover {
+        @include box-shadow(5px 5px 10px 0px $blueviolet_dark);
+        color: $blueviolet_dark;
+      }
+      &.outset {
+        border-color: $blueviolet_outset;
+        background: $blueviolet_outset;
+        &:hover {
+          @include box-shadow(5px 5px 10px 0px $blueviolet_outset);
+          color: $blueviolet_outset;
+        }
+      }
+    }
+
+    .editor input {
+      border-color: $blueviolet_base;
+    }
+  }
+
+}
