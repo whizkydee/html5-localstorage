@@ -37,7 +37,7 @@
 
 body {
   @include transition(background 1s linear);
-  background: $basecolor;
+  background: $teal_base;
   color: $off_white;
   height: $full;
   .main_page {
@@ -52,7 +52,7 @@ body {
 
 .github_fork {
   a {
-    border: .2em dotted $basecolor;
+    border: .2em dotted $teal_base;
     @include transition(all .25s ease);
     @include transform(rotate(45deg));
     display: inline-block;
@@ -60,14 +60,14 @@ body {
     padding: .45em 3em;
     background: $white;
     position: absolute;
-    color: $basecolor;
+    color: $teal_base;
     font-weight: bold;
     cursor: pointer;
     right: -53px;
     top: 43px;
     &:hover {
-      border: .2em dotted darken($basecolor, 5%);
-      background: lighten($basecolor, 5%);
+      border: .2em dotted darken($teal_base, 5%);
+      background: lighten($teal_base, 5%);
       color: $white;
     }
   }
@@ -83,7 +83,7 @@ h1[data-localstorage] {
     @include calc(vertical-align, 5%);
     @include border-radius(3px);
     background: #E8F5F2;
-    color: $basecolor;
+    color: $teal_base;
     font-size: .75em;
     padding: 5px 7px;
   }
@@ -115,10 +115,10 @@ h3 {
 .main_page button {
   @include transition(background, box-shadow, color .3s ease, border .2s ease-in);
   @include border-radius(2px);
-  border: 2px solid #21A1A1;
+  border: 2px solid $teal_dark;
   letter-spacing: .05em;
   font-family: inherit;
-  background: #21A1A1;
+  background: $teal_dark;
   font-weight: normal;
   padding: .32em 1em;
   position: relative;
@@ -127,10 +127,10 @@ h3 {
   font-size: .9rem;
   outline: 0;
   &:hover {
-    @include box-shadow(5px 5px 10px 0px #21A1A1);
+    @include box-shadow(5px 5px 10px 0px $teal_dark);
     border: 2px solid $off_white;
     background: $off_white;
-    color: #21A1A1;
+    color: $teal_dark;
   }
   .editor {
     position: absolute;
@@ -138,7 +138,7 @@ h3 {
     left: 0;
     top: 0;
     input {
-      border: 2px solid $basecolor;
+      border: 2px solid $teal_base;
       position: relative;
       float: left;
     }
