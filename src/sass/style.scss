@@ -247,9 +247,13 @@ body {
             button[data-localstorage] {
               @include border-radius(3px);
               // background: linear-gradient(#37B7B7, #1F9898);
+              margin-bottom: 10px;
               padding: 10px 20px;
               position: relative;
               border: 0 none;
+            }
+            input[type="checkbox"] {
+              vertical-align: -2px;
             }
           }
         }
@@ -308,27 +312,32 @@ body {
     margin-top: 15px;
     label {
       color: darken(#7d7d7d, 10%);
-      font-size: .9rem;
-      display: block;
-      &[for='input1'],
-      &[for='input2'] {
-        margin-left: 25px;
-        text-align: left;
+      &:not([for="checkbox"]) {
+        font-size: .9rem;
+        display: block;
+        &[for='input1'],
+        &[for='input2'] {
+          margin-left: 25px;
+          text-align: left;
+        }
       }
     }
     input {
-      @include transition(border .3s ease);
-      @include border-radius(3px);
-      margin: 0 auto 12px;
-      border-style: solid;
-      border-color: #fff;
-      border-width: 2px;
-      padding: 5px 10px;
-      text-align: left;
-      font-size: .8rem;
-      width: 85%;
-      &:focus {
-        border-color: #6699cc;
+      position: relative;
+      &[type="text"] {
+        @include transition(border .3s ease);
+        @include border-radius(3px);
+        margin: 0 auto 12px;
+        border-style: solid;
+        border-color: #fff;
+        border-width: 2px;
+        padding: 5px 10px;
+        text-align: left;
+        font-size: .8rem;
+        width: 85%;
+        &:focus {
+          border-color: #6699cc;
+        }
       }
     }
     // Hide the theme selector by default

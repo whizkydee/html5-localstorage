@@ -17,21 +17,15 @@ $themeOutsetVars: ($teal_outset, $tomato_outset, $blue_outset, $blueviolet_outse
     $themeBase: nth($themeBaseVars, 1);
     $themeDark: nth($themeDarkVars, 1);
     $themeOutset: nth($themeOutsetVars, 1);
-  }
-
-  @if $singleClass == tomato {
+  } @elseif $singleClass == tomato {
     $themeBase: nth($themeBaseVars, 2);
     $themeDark: nth($themeDarkVars, 2);
     $themeOutset: nth($themeOutsetVars, 2);
-  }
-
-  @if $singleClass == blue {
+  } @elseif $singleClass == blue {
     $themeBase: nth($themeBaseVars, 3);
     $themeDark: nth($themeDarkVars, 3);
     $themeOutset: nth($themeOutsetVars, 3);
-  }
-
-  @if $singleClass == blueviolet {
+  } @elseif $singleClass == blueviolet {
     $themeBase: nth($themeBaseVars, 4);
     $themeDark: nth($themeDarkVars, 4);
     $themeOutset: nth($themeOutsetVars, 4);

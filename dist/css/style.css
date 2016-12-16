@@ -929,9 +929,12 @@ body {
           -ms-border-radius: 3px;
           -o-border-radius: 3px;
           border-radius: 3px;
+          margin-bottom: 10px;
           padding: 10px 20px;
           position: relative;
           border: 0 none; }
+        body .edit__modal.visible#theme_edit .modal_actions #theme_selector input[type="checkbox"] {
+          vertical-align: -2px; }
     body .edit__modal > * {
       text-align: center;
       display: block; }
@@ -991,33 +994,36 @@ body {
   body .modal_actions {
     margin-top: 15px; }
     body .modal_actions label {
-      color: #646464;
-      font-size: .9rem;
-      display: block; }
-      body .modal_actions label[for='input1'], body .modal_actions label[for='input2'] {
-        margin-left: 25px;
-        text-align: left; }
+      color: #646464; }
+      body .modal_actions label:not([for="checkbox"]) {
+        font-size: .9rem;
+        display: block; }
+        body .modal_actions label:not([for="checkbox"])[for='input1'], body .modal_actions label:not([for="checkbox"])[for='input2'] {
+          margin-left: 25px;
+          text-align: left; }
     body .modal_actions input {
-      -webkit-transition: border 0.3s ease;
-      -moz-transition: border 0.3s ease;
-      -ms-transition: border 0.3s ease;
-      -o-transition: border 0.3s ease;
-      transition: border 0.3s ease;
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-      -ms-border-radius: 3px;
-      -o-border-radius: 3px;
-      border-radius: 3px;
-      margin: 0 auto 12px;
-      border-style: solid;
-      border-color: #fff;
-      border-width: 2px;
-      padding: 5px 10px;
-      text-align: left;
-      font-size: .8rem;
-      width: 85%; }
-      body .modal_actions input:focus {
-        border-color: #6699cc; }
+      position: relative; }
+      body .modal_actions input[type="text"] {
+        -webkit-transition: border 0.3s ease;
+        -moz-transition: border 0.3s ease;
+        -ms-transition: border 0.3s ease;
+        -o-transition: border 0.3s ease;
+        transition: border 0.3s ease;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
+        border-radius: 3px;
+        margin: 0 auto 12px;
+        border-style: solid;
+        border-color: #fff;
+        border-width: 2px;
+        padding: 5px 10px;
+        text-align: left;
+        font-size: .8rem;
+        width: 85%; }
+        body .modal_actions input[type="text"]:focus {
+          border-color: #6699cc; }
     body .modal_actions #theme_selector {
       position: relative;
       display: none; }
