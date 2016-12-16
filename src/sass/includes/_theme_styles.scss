@@ -1,221 +1,78 @@
-body {
-  &.teal {
-    background: $teal_base;
+// Store the theme classes in an array to be applied to <body>
+$themeClasses: (teal, tomato, blue, blueviolet);
 
-    ::selection {
-      background: lighten($teal_base, 9%);
-    }
-    ::-webkit-selection {
-      background: lighten($teal_base, 9%);
-    }
-    ::-moz-selection {
-      background: lighten($teal_base, 9%);
-    }
-    ::-ms-selection {
-      background: lighten($teal_base, 9%);
-    }
-    ::-o-selection {
-      background: lighten($teal_base, 9%);
-    }
-    
-    .github_fork a {
-      border-color: $teal_base;
-      color: $teal_base;
-      &:hover {
-        border-color: darken($teal_base, 5%);
-        background: lighten($teal_base, 5%);
-      }
-    }
+// Store some essential variables in an array
+$themeBaseVars: ($teal_base, $tomato_base, $blue_base, $blueviolet_base);
+$themeDarkVars: ($teal_dark, $tomato_dark, $blue_dark, $blueviolet_dark);
+$themeOutsetVars: ($teal_outset, $tomato_outset, $blue_outset, $blueviolet_outset);
 
-    h1[data-localstorage] .code {
-      color: $teal_base;
-    }
+// Loop through the theme classes and do stuff respectively when each is hit
+@for $i from 1 through length($themeClasses) {
+  $singleClass: nth($themeClasses, $i);
+  $themeBase: null;
+  $themeDark: null;
+  $themeOutset: null;
 
-    .main_page button {
-      border-color: $teal_dark;
-      background: $teal_dark;
-      &:hover {
-        @include box-shadow(5px 5px 10px 0px $teal_dark);
-        color: $teal_dark;
-      }
-      &.outset {
-        border-color: $teal_outset;
-        background: $teal_outset;
-        &:hover {
-          @include box-shadow(5px 5px 10px 0px $teal_outset);
-          color: $teal_outset;
-        }
-      }
-    }
-
-    .editor input {
-      border-color: $teal_base;
-    }
+  @if $singleClass == teal {
+    $themeBase: nth($themeBaseVars, 1);
+    $themeDark: nth($themeDarkVars, 1);
+    $themeOutset: nth($themeOutsetVars, 1);
   }
 
-
-  &.tomato {
-    background: $tomato_base;
-
-    ::selection {
-      background: lighten($tomato_base, 9%);
-    }
-    ::-webkit-selection {
-      background: lighten($tomato_base, 9%);
-    }
-    ::-moz-selection {
-      background: lighten($tomato_base, 9%);
-    }
-    ::-ms-selection {
-      background: lighten($tomato_base, 9%);
-    }
-    ::-o-selection {
-      background: lighten($tomato_base, 9%);
-    }
-
-    .github_fork a {
-      border-color: $tomato_base;
-      color: $tomato_base;
-      &:hover {
-        border-color: darken($tomato_base, 5%);
-        background: lighten($tomato_base, 5%);
-      }
-    }
-
-    h1[data-localstorage] .code {
-      color: $tomato_base;
-    }
-
-    .main_page button {
-      border-color: $tomato_dark;
-      background: $tomato_dark;
-      &:hover {
-        @include box-shadow(5px 5px 10px 0px $tomato_dark);
-        color: $tomato_dark;
-      }
-      &.outset {
-        border-color: $tomato_outset;
-        background: $tomato_outset;
-        &:hover {
-          @include box-shadow(5px 5px 10px 0px $tomato_outset);
-          color: $tomato_outset;
-        }
-      }
-    }
-
-    .editor input {
-      border-color: $tomato_base;
-    }
+  @if $singleClass == tomato {
+    $themeBase: nth($themeBaseVars, 2);
+    $themeDark: nth($themeDarkVars, 2);
+    $themeOutset: nth($themeOutsetVars, 2);
   }
 
-
-  &.blue {
-    background: $blue_base;
-
-    ::selection {
-      background: lighten($blue_base, 9%);
-    }
-    ::-webkit-selection {
-      background: lighten($blue_base, 9%);
-    }
-    ::-moz-selection {
-      background: lighten($blue_base, 9%);
-    }
-    ::-ms-selection {
-      background: lighten($blue_base, 9%);
-    }
-    ::-o-selection {
-      background: lighten($blue_base, 9%);
-    }
-
-    .github_fork a {
-      border-color: $blue_base;
-      color: $blue_base;
-      &:hover {
-        border-color: darken($blue_base, 5%);
-        background: lighten($blue_base, 5%);
-      }
-    }
-
-    h1[data-localstorage] .code {
-      color: $blue_base;
-    }
-
-    .main_page button {
-      border-color: $blue_dark;
-      background: $blue_dark;
-      &:hover {
-        @include box-shadow(5px 5px 10px 0px $blue_dark);
-        color: $blue_dark;
-      }
-      &.outset {
-        border-color: $blue_outset;
-        background: $blue_outset;
-        &:hover {
-          @include box-shadow(5px 5px 10px 0px $blue_outset);
-          color: $blue_outset;
-        }
-      }
-    }
-
-    .editor input {
-      border-color: $blue_base;
-    }
+  @if $singleClass == blue {
+    $themeBase: nth($themeBaseVars, 3);
+    $themeDark: nth($themeDarkVars, 3);
+    $themeOutset: nth($themeOutsetVars, 3);
   }
 
-
-  &.blueviolet {
-    background: $blueviolet_base;
-
-    ::selection {
-      background: lighten($blueviolet_base, 9%);
-    }
-    ::-webkit-selection {
-      background: lighten($blueviolet_base, 9%);
-    }
-    ::-moz-selection {
-      background: lighten($blueviolet_base, 9%);
-    }
-    ::-ms-selection {
-      background: lighten($blueviolet_base, 9%);
-    }
-    ::-o-selection {
-      background: lighten($blueviolet_base, 9%);
-    }
-
-    .github_fork a {
-      border-color: $blueviolet_base;
-      color: $blueviolet_base;
-      &:hover {
-        border-color: darken($blueviolet_base, 5%);
-        background: lighten($blueviolet_base, 5%);
-      }
-    }
-
-    h1[data-localstorage] .code {
-      color: $blueviolet_base;
-    }
-
-    .main_page button {
-      border-color: $blueviolet_dark;
-      background: $blueviolet_dark;
-      &:hover {
-        @include box-shadow(5px 5px 10px 0px $blueviolet_dark);
-        color: $blueviolet_dark;
-      }
-      &.outset {
-        border-color: $blueviolet_outset;
-        background: $blueviolet_outset;
-        &:hover {
-          @include box-shadow(5px 5px 10px 0px $blueviolet_outset);
-          color: $blueviolet_outset;
-        }
-      }
-    }
-
-    .editor input {
-      border-color: $blueviolet_base;
-    }
+  @if $singleClass == blueviolet {
+    $themeBase: nth($themeBaseVars, 4);
+    $themeDark: nth($themeDarkVars, 4);
+    $themeOutset: nth($themeOutsetVars, 4);
   }
 
+  body {
+    &.#{$singleClass} {
+      background: $themeBase;
+      @include browserSelection($themeBase);
+      .github_fork a {
+        border-color: $themeBase;
+        color: $themeBase;
+        &:hover {
+          border-color: darken($themeBase, 5%);
+          background: lighten($themeBase, 5%);
+        }
+      }
+      h1[data-localstorage] .code {
+        color: $themeBase;
+      }
+      .main_page button {
+        border-color: $themeDark;
+        background: $themeDark;
+        &:hover {
+          @include box-shadow(5px 5px 10px 0px $themeDark);
+          color: $themeDark;
+        }
+        &.outset {
+          border-color: $themeOutset;
+          background: $themeOutset;
+          &:hover {
+            @include box-shadow(5px 5px 10px 0px $themeOutset);
+            border-color: $off_white;
+            background: $off_white;
+            color: $themeOutset;
+          }
+        }
+      }
+      .editor input {
+        border-color: $themeBase;
+      }
+    }
+  }
 }
