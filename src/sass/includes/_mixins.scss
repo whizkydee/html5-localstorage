@@ -83,3 +83,21 @@
   #{$property}: -moz-calc(#{$expression});
   #{$property}: calc(#{$expression});
 }
+
+@mixin browserSelection ($bgColor) {
+  ::selection {
+    background: lighten($bgColor, 9%);
+  }
+  ::-webkit-selection {
+    background: lighten($bgColor, 9%);
+  }
+  ::-moz-selection {
+    background: lighten($bgColor, 9%);
+  }
+  ::-ms-selection {
+    background: lighten($bgColor, 9%);
+  }
+  ::-o-selection {
+    background: lighten($bgColor, 9%);
+  }
+}
