@@ -540,6 +540,8 @@ body.teal {
         -ms-box-shadow: 5px 5px 10px 0px #41C1C1;
         -o-box-shadow: 5px 5px 10px 0px #41C1C1;
         box-shadow: 5px 5px 10px 0px #41C1C1;
+        border-color: #f9f9f9;
+        background: #f9f9f9;
         color: #41C1C1; }
   body.teal .editor input {
     border-color: #37B7B7; }
@@ -583,6 +585,8 @@ body.tomato {
         -ms-box-shadow: 5px 5px 10px 0px #F34E4E;
         -o-box-shadow: 5px 5px 10px 0px #F34E4E;
         box-shadow: 5px 5px 10px 0px #F34E4E;
+        border-color: #f9f9f9;
+        background: #f9f9f9;
         color: #F34E4E; }
   body.tomato .editor input {
     border-color: #E94444; }
@@ -626,6 +630,8 @@ body.blue {
         -ms-box-shadow: 5px 5px 10px 0px #20A4EB;
         -o-box-shadow: 5px 5px 10px 0px #20A4EB;
         box-shadow: 5px 5px 10px 0px #20A4EB;
+        border-color: #f9f9f9;
+        background: #f9f9f9;
         color: #20A4EB; }
   body.blue .editor input {
     border-color: #169AE1; }
@@ -669,6 +675,8 @@ body.blueviolet {
         -ms-box-shadow: 5px 5px 10px 0px #9435ec;
         -o-box-shadow: 5px 5px 10px 0px #9435ec;
         box-shadow: 5px 5px 10px 0px #9435ec;
+        border-color: #f9f9f9;
+        background: #f9f9f9;
         color: #9435ec; }
   body.blueviolet .editor input {
     border-color: #8a2be2; }
