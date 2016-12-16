@@ -336,7 +336,7 @@ body {
       position: relative;
       display: none;
     }
-    #two_actions {
+    #user_actions {
       display: block;
       button {
         @include transition(background .3s ease-out);

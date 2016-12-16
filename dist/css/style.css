@@ -1021,9 +1021,9 @@ body {
     body .modal_actions #theme_selector {
       position: relative;
       display: none; }
-    body .modal_actions #two_actions {
+    body .modal_actions #user_actions {
       display: block; }
-      body .modal_actions #two_actions button {
+      body .modal_actions #user_actions button {
         -webkit-transition: background 0.3s ease-out;
         -moz-transition: background 0.3s ease-out;
         -ms-transition: background 0.3s ease-out;
@@ -1035,7 +1035,7 @@ body {
         color: #f9f9f9;
         border: 0 none;
         color: #3f5261; }
-        body .modal_actions #two_actions button:hover {
+        body .modal_actions #user_actions button:hover {
           background: #bcbcbc; }
 
 /*# sourceMappingURL=style.css.map */
