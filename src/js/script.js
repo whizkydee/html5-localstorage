@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         each.addEventListener('click', e => {
           let text = e.target.innerText.toLowerCase();
           themes.forEach((theme) => {
-            if (body.classList.contains(theme)) {
+            if (true === body.classList.contains(theme)) {
               body.classList = '';
               body.classList = text;
             } else {
@@ -73,6 +73,16 @@ document.addEventListener('DOMContentLoaded', () => {
           });
         }, false);
       });
+
+      let outsetOption = document.querySelector('#theme_selector label[for="checkbox"]');
+      let clearBtn = document.getElementById('clear');
+
+      outsetOption.addEventListener('click', () => {
+        btns.forEach((btn) => {
+          btn.classList.add('outset');
+          clearBtn.classList.add('outset');
+        });
+      }, false);
 
       // Define function to exit the modal
       function exitModal() {
