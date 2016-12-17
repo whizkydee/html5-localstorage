@@ -4,6 +4,9 @@
 document.addEventListener('DOMContentLoaded', function () {
   // Begin regular document stuff (UI and functions)
 
+  // Get the body element
+  var body = document.body;
+
   // Define constants for [data-localstorage] buttons and modal
   var btns = document.querySelectorAll('.edit > button');
   var modal = document.querySelector('.edit__modal');
@@ -51,12 +54,27 @@ document.addEventListener('DOMContentLoaded', function () {
       var btnDesc = btns[i].getAttribute('data-desc');
 
       // Set modal description based on the innerText of the button clicked
-      modalDescElem.innerHTML = '' + btnDesc;
+      modalDescElem.innerHTML = btnDesc;
 
       // Get the theme selector functions
       // Define essential variables for the theme selector
       var themeSelector = document.getElementById('theme_selector');
-      var labels = document.querySelectorAll('#theme_selector > label > input');
+      var themeBtn = document.querySelectorAll('#theme_selector button');
+      var themes = ['teal', 'tomato', 'blue', 'blueviolet'];
+
+      themeBtn.forEach(function (each) {
+        each.addEventListener('click', function (e) {
+          var text = e.target.innerText.toLowerCase();
+          themes.forEach(function (theme) {
+            if (body.classList.contains(theme)) {
+              body.classList = '';
+              body.classList = text;
+            } else {
+              body.classList = text;
+            }
+          });
+        }, false);
+      });
 
       // Define function to exit the modal
       function exitModal() {
