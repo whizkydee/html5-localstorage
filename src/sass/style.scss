@@ -245,12 +245,13 @@ body {
             padding: 15px 0;
             display: block;
             button[data-localstorage] {
-              @include border-radius(3px);
-              // background: linear-gradient(#37B7B7, #1F9898);
+              @include border-radius(2px);
+              border: 2px solid #cbcbcb;
               margin-bottom: 10px;
-              padding: 10px 20px;
+              background: #F0F0F0;
               position: relative;
-              border: 0 none;
+              padding: 5px 15px;
+              color: #3f5261;
             }
             input[type="checkbox"] {
               vertical-align: -2px;
@@ -312,6 +313,7 @@ body {
     margin-top: 15px;
     label {
       color: darken(#7d7d7d, 10%);
+      display: block;
       &:not([for="checkbox"]) {
         font-size: .9rem;
         display: block;

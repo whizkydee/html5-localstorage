@@ -924,15 +924,17 @@ body {
         padding: 15px 0;
         display: block; }
         body .edit__modal.visible#theme_edit .modal_actions #theme_selector button[data-localstorage] {
-          -webkit-border-radius: 3px;
-          -moz-border-radius: 3px;
-          -ms-border-radius: 3px;
-          -o-border-radius: 3px;
-          border-radius: 3px;
+          -webkit-border-radius: 2px;
+          -moz-border-radius: 2px;
+          -ms-border-radius: 2px;
+          -o-border-radius: 2px;
+          border-radius: 2px;
+          border: 2px solid #cbcbcb;
           margin-bottom: 10px;
-          padding: 10px 20px;
+          background: #F0F0F0;
           position: relative;
-          border: 0 none; }
+          padding: 5px 15px;
+          color: #3f5261; }
         body .edit__modal.visible#theme_edit .modal_actions #theme_selector input[type="checkbox"] {
           vertical-align: -2px; }
     body .edit__modal > * {
@@ -994,7 +996,8 @@ body {
   body .modal_actions {
     margin-top: 15px; }
     body .modal_actions label {
-      color: #646464; }
+      color: #646464;
+      display: block; }
       body .modal_actions label:not([for="checkbox"]) {
         font-size: .9rem;
         display: block; }
