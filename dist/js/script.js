@@ -60,8 +60,10 @@ document.addEventListener('DOMContentLoaded', function () {
       // Define essential variables for the theme selector
       var themeSelector = document.getElementById('theme_selector');
       var themeBtn = document.querySelectorAll('#theme_selector button');
+      // Define an array of the available themes
       var themes = ['teal', 'tomato', 'blue', 'blueviolet'];
 
+      // Loop through the theme selector buttons and add it's class to the body
       themeBtn.forEach(function (each) {
         each.addEventListener('click', function (e) {
           var text = e.target.innerText.toLowerCase();
@@ -76,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }, false);
       });
 
+      // Define variables for button.outset functionality
       var outsetOption = document.querySelector('#theme_selector label[for="checkbox"]');
       var clearBtn = document.getElementById('clear');
 

@@ -58,8 +58,10 @@ document.addEventListener('DOMContentLoaded', () => {
       // Define essential variables for the theme selector
       let themeSelector = document.getElementById('theme_selector');
       let themeBtn = document.querySelectorAll('#theme_selector button');
+      // Define an array of the available themes
       let themes = ['teal', 'tomato', 'blue', 'blueviolet'];
 
+      // Loop through the theme selector buttons and add it's class to the body
       themeBtn.forEach((each) => {
         each.addEventListener('click', e => {
           let text = e.target.innerText.toLowerCase();
@@ -74,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, false);
       });
 
+      // Define variables for button.outset functionality
       let outsetOption = document.querySelector('#theme_selector label[for="checkbox"]');
       let clearBtn = document.getElementById('clear');
 
@@ -91,8 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         for (let i = 0; i < btns.length; i++) {
           // If the buttons have a `disabled` attribute, remove it
-          if (true === btns[i].hasAttribute('disabled'))
-            btns[i].removeAttribute('disabled');
+          if (true === btns[i].hasAttribute('disabled')) btns[i].removeAttribute('disabled');
         }
 
         /**
