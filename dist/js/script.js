@@ -103,7 +103,6 @@ document.addEventListener('DOMContentLoaded', function () {
          * Reset the modal title to `Edit` if it already has a title inherited
          * from the button clicked within a timeout of .120 seconds
          */
-
         if (-1 === modalTitleElem.innerText.indexOf('Edit')) {
           setTimeout(function () {
             modalTitleElem.innerText = 'Edit';
@@ -115,7 +114,6 @@ document.addEventListener('DOMContentLoaded', function () {
          * description inherited from the [data-desc] attr of the button clicked
          * within a timeout of .120 seconds
          */
-
         if (-1 === modalDescElem.innerHTML.indexOf('')) {
           setTimeout(function () {
             modalDescElem.innerHTML = '';
