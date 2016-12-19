@@ -501,40 +501,40 @@ body ::-o-selection {
   background: #51cbcb;
   color: #f9f9f9; }
 
-body.teal {
+body.theme-teal {
   background: #37B7B7; }
-  body.teal ::selection {
+  body.theme-teal ::selection {
     background: #51cbcb; }
-  body.teal ::-webkit-selection {
+  body.theme-teal ::-webkit-selection {
     background: #51cbcb; }
-  body.teal ::-moz-selection {
+  body.theme-teal ::-moz-selection {
     background: #51cbcb; }
-  body.teal ::-ms-selection {
+  body.theme-teal ::-ms-selection {
     background: #51cbcb; }
-  body.teal ::-o-selection {
+  body.theme-teal ::-o-selection {
     background: #51cbcb; }
-  body.teal .github_fork a {
+  body.theme-teal .github_fork a {
     border-color: #37B7B7;
     color: #37B7B7; }
-    body.teal .github_fork a:hover {
+    body.theme-teal .github_fork a:hover {
       border-color: #31a3a3;
       background: #41c6c6; }
-  body.teal h1[data-localstorage] .code {
+  body.theme-teal h1[data-localstorage] .code {
     color: #37B7B7; }
-  body.teal .main_page button {
+  body.theme-teal .main_page button {
     border-color: #21A1A1;
     background: #21A1A1; }
-    body.teal .main_page button:hover {
+    body.theme-teal .main_page button:hover {
       -webkit-box-shadow: 5px 5px 10px 0px #21A1A1;
       -moz-box-shadow: 5px 5px 10px 0px #21A1A1;
       -ms-box-shadow: 5px 5px 10px 0px #21A1A1;
       -o-box-shadow: 5px 5px 10px 0px #21A1A1;
       box-shadow: 5px 5px 10px 0px #21A1A1;
       color: #21A1A1; }
-    body.teal .main_page button.outset {
+    body.theme-teal .main_page button.outset {
       border-color: #41C1C1;
       background: #41C1C1; }
-      body.teal .main_page button.outset:hover {
+      body.theme-teal .main_page button.outset:hover {
         -webkit-box-shadow: 5px 5px 10px 0px #41C1C1;
         -moz-box-shadow: 5px 5px 10px 0px #41C1C1;
         -ms-box-shadow: 5px 5px 10px 0px #41C1C1;
@@ -543,43 +543,43 @@ body.teal {
         border-color: #f9f9f9;
         background: #f9f9f9;
         color: #41C1C1; }
-  body.teal .editor input {
+  body.theme-teal .editor input {
     border-color: #37B7B7; }
 
-body.tomato {
+body.theme-tomato {
   background: #E94444; }
-  body.tomato ::selection {
+  body.theme-tomato ::selection {
     background: #ee6d6d; }
-  body.tomato ::-webkit-selection {
+  body.theme-tomato ::-webkit-selection {
     background: #ee6d6d; }
-  body.tomato ::-moz-selection {
+  body.theme-tomato ::-moz-selection {
     background: #ee6d6d; }
-  body.tomato ::-ms-selection {
+  body.theme-tomato ::-ms-selection {
     background: #ee6d6d; }
-  body.tomato ::-o-selection {
+  body.theme-tomato ::-o-selection {
     background: #ee6d6d; }
-  body.tomato .github_fork a {
+  body.theme-tomato .github_fork a {
     border-color: #E94444;
     color: #E94444; }
-    body.tomato .github_fork a:hover {
+    body.theme-tomato .github_fork a:hover {
       border-color: #e62d2d;
       background: #ec5b5b; }
-  body.tomato h1[data-localstorage] .code {
+  body.theme-tomato h1[data-localstorage] .code {
     color: #E94444; }
-  body.tomato .main_page button {
+  body.theme-tomato .main_page button {
     border-color: #E03B3B;
     background: #E03B3B; }
-    body.tomato .main_page button:hover {
+    body.theme-tomato .main_page button:hover {
       -webkit-box-shadow: 5px 5px 10px 0px #E03B3B;
       -moz-box-shadow: 5px 5px 10px 0px #E03B3B;
       -ms-box-shadow: 5px 5px 10px 0px #E03B3B;
       -o-box-shadow: 5px 5px 10px 0px #E03B3B;
       box-shadow: 5px 5px 10px 0px #E03B3B;
       color: #E03B3B; }
-    body.tomato .main_page button.outset {
+    body.theme-tomato .main_page button.outset {
       border-color: #F34E4E;
       background: #F34E4E; }
-      body.tomato .main_page button.outset:hover {
+      body.theme-tomato .main_page button.outset:hover {
         -webkit-box-shadow: 5px 5px 10px 0px #F34E4E;
         -moz-box-shadow: 5px 5px 10px 0px #F34E4E;
         -ms-box-shadow: 5px 5px 10px 0px #F34E4E;
@@ -588,43 +588,43 @@ body.tomato {
         border-color: #f9f9f9;
         background: #f9f9f9;
         color: #F34E4E; }
-  body.tomato .editor input {
+  body.theme-tomato .editor input {
     border-color: #E94444; }
 
-body.blue {
+body.theme-blue {
   background: #169AE1; }
-  body.blue ::selection {
+  body.theme-blue ::selection {
     background: #39adec; }
-  body.blue ::-webkit-selection {
+  body.theme-blue ::-webkit-selection {
     background: #39adec; }
-  body.blue ::-moz-selection {
+  body.theme-blue ::-moz-selection {
     background: #39adec; }
-  body.blue ::-ms-selection {
+  body.theme-blue ::-ms-selection {
     background: #39adec; }
-  body.blue ::-o-selection {
+  body.theme-blue ::-o-selection {
     background: #39adec; }
-  body.blue .github_fork a {
+  body.theme-blue .github_fork a {
     border-color: #169AE1;
     color: #169AE1; }
-    body.blue .github_fork a:hover {
+    body.theme-blue .github_fork a:hover {
       border-color: #148aca;
       background: #27a6ea; }
-  body.blue h1[data-localstorage] .code {
+  body.theme-blue h1[data-localstorage] .code {
     color: #169AE1; }
-  body.blue .main_page button {
+  body.theme-blue .main_page button {
     border-color: #0E92D9;
     background: #0E92D9; }
-    body.blue .main_page button:hover {
+    body.theme-blue .main_page button:hover {
       -webkit-box-shadow: 5px 5px 10px 0px #0E92D9;
       -moz-box-shadow: 5px 5px 10px 0px #0E92D9;
       -ms-box-shadow: 5px 5px 10px 0px #0E92D9;
       -o-box-shadow: 5px 5px 10px 0px #0E92D9;
       box-shadow: 5px 5px 10px 0px #0E92D9;
       color: #0E92D9; }
-    body.blue .main_page button.outset {
+    body.theme-blue .main_page button.outset {
       border-color: #20A4EB;
       background: #20A4EB; }
-      body.blue .main_page button.outset:hover {
+      body.theme-blue .main_page button.outset:hover {
         -webkit-box-shadow: 5px 5px 10px 0px #20A4EB;
         -moz-box-shadow: 5px 5px 10px 0px #20A4EB;
         -ms-box-shadow: 5px 5px 10px 0px #20A4EB;
@@ -633,43 +633,43 @@ body.blue {
         border-color: #f9f9f9;
         background: #f9f9f9;
         color: #20A4EB; }
-  body.blue .editor input {
+  body.theme-blue .editor input {
     border-color: #169AE1; }
 
-body.blueviolet {
+body.theme-blueviolet {
   background: #8a2be2; }
-  body.blueviolet ::selection {
+  body.theme-blueviolet ::selection {
     background: #a053e8; }
-  body.blueviolet ::-webkit-selection {
+  body.theme-blueviolet ::-webkit-selection {
     background: #a053e8; }
-  body.blueviolet ::-moz-selection {
+  body.theme-blueviolet ::-moz-selection {
     background: #a053e8; }
-  body.blueviolet ::-ms-selection {
+  body.theme-blueviolet ::-ms-selection {
     background: #a053e8; }
-  body.blueviolet ::-o-selection {
+  body.theme-blueviolet ::-o-selection {
     background: #a053e8; }
-  body.blueviolet .github_fork a {
+  body.theme-blueviolet .github_fork a {
     border-color: #8a2be2;
     color: #8a2be2; }
-    body.blueviolet .github_fork a:hover {
+    body.theme-blueviolet .github_fork a:hover {
       border-color: #7d1dd6;
       background: #9641e5; }
-  body.blueviolet h1[data-localstorage] .code {
+  body.theme-blueviolet h1[data-localstorage] .code {
     color: #8a2be2; }
-  body.blueviolet .main_page button {
+  body.theme-blueviolet .main_page button {
     border-color: #8021d8;
     background: #8021d8; }
-    body.blueviolet .main_page button:hover {
+    body.theme-blueviolet .main_page button:hover {
       -webkit-box-shadow: 5px 5px 10px 0px #8021d8;
       -moz-box-shadow: 5px 5px 10px 0px #8021d8;
       -ms-box-shadow: 5px 5px 10px 0px #8021d8;
       -o-box-shadow: 5px 5px 10px 0px #8021d8;
       box-shadow: 5px 5px 10px 0px #8021d8;
       color: #8021d8; }
-    body.blueviolet .main_page button.outset {
+    body.theme-blueviolet .main_page button.outset {
       border-color: #9435ec;
       background: #9435ec; }
-      body.blueviolet .main_page button.outset:hover {
+      body.theme-blueviolet .main_page button.outset:hover {
         -webkit-box-shadow: 5px 5px 10px 0px #9435ec;
         -moz-box-shadow: 5px 5px 10px 0px #9435ec;
         -ms-box-shadow: 5px 5px 10px 0px #9435ec;
@@ -678,7 +678,7 @@ body.blueviolet {
         border-color: #f9f9f9;
         background: #f9f9f9;
         color: #9435ec; }
-  body.blueviolet .editor input {
+  body.theme-blueviolet .editor input {
     border-color: #8a2be2; }
 
 @font-face {

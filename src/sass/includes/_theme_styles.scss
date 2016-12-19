@@ -32,7 +32,7 @@ $themeOutsetVars: ($teal_outset, $tomato_outset, $blue_outset, $blueviolet_outse
   }
 
   body {
-    &.#{$singleClass} {
+    &.theme-#{$singleClass} {
       background: $themeBase;
       @include browserSelection($themeBase);
       .github_fork a {
