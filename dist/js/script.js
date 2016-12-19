@@ -66,8 +66,9 @@ document.addEventListener('DOMContentLoaded', function () {
       // Loop through the theme selector buttons and add it's class to the body
       themeBtn.forEach(function (each) {
         each.addEventListener('click', function (e) {
-          var text = e.target.innerText.toLowerCase();
+          var text = 'theme-' + e.target.innerText.toLowerCase();
           themes.forEach(function (theme) {
+            theme = 'theme-' + theme;
             if (true === body.classList.contains(theme)) {
               body.classList = '';
               body.classList = text;
