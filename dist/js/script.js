@@ -63,31 +63,37 @@ document.addEventListener('DOMContentLoaded', function () {
       // Define an array of the available themes
       var themes = ['teal', 'tomato', 'blue', 'blueviolet'];
 
-      // Loop through the theme selector buttons and add it's class to the body
-      themeBtn.forEach(function (each) {
-        each.addEventListener('click', function (e) {
+      // Loop through the theme selector buttons and add it's class to <body>
+
+      var _loop = function _loop(_i2) {
+        themeBtn[_i2].addEventListener('click', function (e) {
           var text = 'theme-' + e.target.innerText.toLowerCase();
-          themes.forEach(function (theme) {
-            theme = 'theme-' + theme;
+          console.log(_i2);
+          for (var _i5 = 0; _i5 < themes.length; _i5++) {
+            var theme = 'theme-' + themes[_i5];
             if (true === body.classList.contains(theme)) {
               body.classList = '';
               body.classList = text;
             } else {
               body.classList = text;
             }
-          });
+          }
         }, false);
-      });
+      };
+
+      for (var _i2 = 0; _i2 < themeBtn.length; _i2++) {
+        _loop(_i2);
+      }
 
       // Define variables for button.outset functionality
       var outsetOption = document.querySelector('#theme_selector label[for="checkbox"]');
       var clearBtn = document.getElementById('clear');
 
       outsetOption.addEventListener('click', function () {
-        btns.forEach(function (btn) {
-          btn.classList.add('outset');
+        for (var _i3 = 0; _i3 < btns.length; _i3++) {
+          btns[_i3].classList.add('outset');
           clearBtn.classList.add('outset');
-        });
+        }
       }, false);
 
       // Define function to exit the modal
@@ -95,9 +101,9 @@ document.addEventListener('DOMContentLoaded', function () {
         // If the modal has a `visible` class, remove it
         if (true === modal.classList.contains('visible')) modal.classList.remove('visible');
 
-        for (var _i2 = 0; _i2 < btns.length; _i2++) {
+        for (var _i4 = 0; _i4 < btns.length; _i4++) {
           // If the buttons have a `disabled` attribute, remove it
-          if (true === btns[_i2].hasAttribute('disabled')) btns[_i2].removeAttribute('disabled');
+          if (true === btns[_i4].hasAttribute('disabled')) btns[_i4].removeAttribute('disabled');
         }
 
         /**

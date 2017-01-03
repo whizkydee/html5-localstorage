@@ -61,31 +61,32 @@ document.addEventListener('DOMContentLoaded', () => {
       // Define an array of the available themes
       let themes = ['teal', 'tomato', 'blue', 'blueviolet'];
 
-      // Loop through the theme selector buttons and add it's class to the body
-      themeBtn.forEach((each) => {
-        each.addEventListener('click', e => {
+      // Loop through the theme selector buttons and add it's class to <body>
+      for (let i = 0; i < themeBtn.length; i++) {
+        themeBtn[i].addEventListener('click', e => {
           let text = `theme-${e.target.innerText.toLowerCase()}`;
-          themes.forEach((theme) => {
-            theme = `theme-${theme}`;
+          console.log(i);
+          for (let i = 0; i < themes.length; i++) {
+            let theme = `theme-${themes[i]}`;
             if (true === body.classList.contains(theme)) {
               body.classList = '';
               body.classList = text;
             } else {
               body.classList = text;
             }
-          });
+          }
         }, false);
-      });
+      }
 
       // Define variables for button.outset functionality
       let outsetOption = document.querySelector('#theme_selector label[for="checkbox"]');
       let clearBtn = document.getElementById('clear');
 
       outsetOption.addEventListener('click', () => {
-        btns.forEach((btn) => {
-          btn.classList.add('outset');
+        for (let i = 0; i < btns.length; i++) {
+          btns[i].classList.add('outset');
           clearBtn.classList.add('outset');
-        });
+        }
       }, false);
 
       // Define function to exit the modal
