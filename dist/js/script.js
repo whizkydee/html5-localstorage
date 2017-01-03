@@ -64,13 +64,11 @@ document.addEventListener('DOMContentLoaded', function () {
       var themes = ['teal', 'tomato', 'blue', 'blueviolet'];
 
       // Loop through the theme selector buttons and add it's class to <body>
-
-      var _loop = function _loop(_i2) {
+      for (var _i2 = 0; _i2 < themeBtn.length; _i2++) {
         themeBtn[_i2].addEventListener('click', function (e) {
           var text = 'theme-' + e.target.innerText.toLowerCase();
-          console.log(_i2);
-          for (var _i5 = 0; _i5 < themes.length; _i5++) {
-            var theme = 'theme-' + themes[_i5];
+          for (var _i3 = 0; _i3 < themes.length; _i3++) {
+            var theme = 'theme-' + themes[_i3];
             if (true === body.classList.contains(theme)) {
               body.classList = '';
               body.classList = text;
@@ -79,10 +77,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
           }
         }, false);
-      };
-
-      for (var _i2 = 0; _i2 < themeBtn.length; _i2++) {
-        _loop(_i2);
       }
 
       // Define variables for button.outset functionality
@@ -90,8 +84,8 @@ document.addEventListener('DOMContentLoaded', function () {
       var clearBtn = document.getElementById('clear');
 
       outsetOption.addEventListener('click', function () {
-        for (var _i3 = 0; _i3 < btns.length; _i3++) {
-          btns[_i3].classList.add('outset');
+        for (var _i4 = 0; _i4 < btns.length; _i4++) {
+          btns[_i4].classList.add('outset');
           clearBtn.classList.add('outset');
         }
       }, false);
@@ -101,9 +95,9 @@ document.addEventListener('DOMContentLoaded', function () {
         // If the modal has a `visible` class, remove it
         if (true === modal.classList.contains('visible')) modal.classList.remove('visible');
 
-        for (var _i4 = 0; _i4 < btns.length; _i4++) {
+        for (var _i5 = 0; _i5 < btns.length; _i5++) {
           // If the buttons have a `disabled` attribute, remove it
-          if (true === btns[_i4].hasAttribute('disabled')) btns[_i4].removeAttribute('disabled');
+          if (true === btns[_i5].hasAttribute('disabled')) btns[_i5].removeAttribute('disabled');
         }
 
         /**

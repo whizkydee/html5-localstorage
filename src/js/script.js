@@ -65,7 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
       for (let i = 0; i < themeBtn.length; i++) {
         themeBtn[i].addEventListener('click', e => {
           let text = `theme-${e.target.innerText.toLowerCase()}`;
-          console.log(i);
           for (let i = 0; i < themes.length; i++) {
             let theme = `theme-${themes[i]}`;
             if (true === body.classList.contains(theme)) {
