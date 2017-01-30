@@ -45,7 +45,7 @@ body {
     @include transform(translate(-50%, -50%));
     position: absolute;
     text-align: center;
-    width: 60%;
+    width: $full;
     left: 50%;
     top: 50%;
   }

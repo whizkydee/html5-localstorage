@@ -3,12 +3,16 @@ import babel      from 'gulp-babel';
 import sass       from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
 
+// const parsed = JSON.parse(fs.readFileSync('./package.json'));
+
 // Assets source files path
-const sassSrc = 'src/sass/**/*.scss';
-const jsSrc = 'src/js/**/*.js';
+const paths = {
+  sass: 'src/sass/**/*.scss',
+  script: 'src/js/**/*.js'
+};
 
 gulp.task('sass', () => {
-  return gulp.src(sassSrc)
+  return gulp.src(paths.sass)
   .pipe(sourcemaps.init())
   .pipe(sass().on('error', sass.logError))
   .pipe(sourcemaps.write('.'))
@@ -16,7 +20,7 @@ gulp.task('sass', () => {
 });
 
 gulp.task('transpile', () => {
-  return gulp.src(jsSrc)
+  return gulp.src(paths.script)
   .pipe(sourcemaps.init())
   .pipe(babel())
   .pipe(sourcemaps.write('.'))
@@ -25,8 +29,8 @@ gulp.task('transpile', () => {
 
 
 gulp.task('watch', () => {
-  gulp.watch(jsSrc, ['transpile']);
-  gulp.watch(sassSrc, ['sass']);
+  gulp.watch(paths.script, ['transpile']);
+  gulp.watch(paths.sass, ['sass']);
 });
 
 gulp.task('default', ['watch', 'transpile', 'sass']);

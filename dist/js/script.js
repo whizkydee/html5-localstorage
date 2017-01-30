@@ -85,8 +85,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
       outsetOption.addEventListener('click', function () {
         for (var _i4 = 0; _i4 < btns.length; _i4++) {
-          btns[_i4].classList.add('outset');
-          clearBtn.classList.add('outset');
+          btns[_i4].classList.toggle('outset');
+          clearBtn.classList.toggle('outset');
         }
       }, false);
 
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
          * description inherited from the [data-desc] attr of the button clicked
          * within a timeout of .120 seconds
          */
-        if (-1 === modalDescElem.innerHTML.indexOf('')) {
+        if (0 === modalDescElem.innerHTML.length) {
           setTimeout(function () {
             modalDescElem.innerHTML = '';
           }, 120);
@@ -170,5 +170,9 @@ document.addEventListener('DOMContentLoaded', function () {
   for (var i = 0; i < btns.length; i++) {
     loop(i);
   }
+
+  (function () {
+    var storage = window.localStorage;
+  })();
 }, false);
 //# sourceMappingURL=script.js.map

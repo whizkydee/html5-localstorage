@@ -722,7 +722,7 @@ body {
     transform: translate(-50%, -50%);
     position: absolute;
     text-align: center;
-    width: 60%;
+    width: 100%;
     left: 50%;
     top: 50%; }
   body .github_fork a {
