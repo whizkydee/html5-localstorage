@@ -519,7 +519,7 @@ body.theme-teal {
     body.theme-teal .github_fork a:hover {
       border-color: #31a3a3;
       background: #41c6c6; }
-  body.theme-teal h1[data-localstorage] .code {
+  body.theme-teal h1[data-editable] .code {
     color: #37B7B7; }
   body.theme-teal .main_page button {
     border-color: #21A1A1;
@@ -564,7 +564,7 @@ body.theme-tomato {
     body.theme-tomato .github_fork a:hover {
       border-color: #e62d2d;
       background: #ec5b5b; }
-  body.theme-tomato h1[data-localstorage] .code {
+  body.theme-tomato h1[data-editable] .code {
     color: #E94444; }
   body.theme-tomato .main_page button {
     border-color: #E03B3B;
@@ -609,7 +609,7 @@ body.theme-blue {
     body.theme-blue .github_fork a:hover {
       border-color: #148aca;
       background: #27a6ea; }
-  body.theme-blue h1[data-localstorage] .code {
+  body.theme-blue h1[data-editable] .code {
     color: #169AE1; }
   body.theme-blue .main_page button {
     border-color: #0E92D9;
@@ -654,7 +654,7 @@ body.theme-blueviolet {
     body.theme-blueviolet .github_fork a:hover {
       border-color: #7d1dd6;
       background: #9641e5; }
-  body.theme-blueviolet h1[data-localstorage] .code {
+  body.theme-blueviolet h1[data-editable] .code {
     color: #8a2be2; }
   body.theme-blueviolet .main_page button {
     border-color: #8021d8;
@@ -753,12 +753,12 @@ body {
       border-color: #31a3a3;
       background: #41c6c6;
       color: #fff; }
-  body h1[data-localstorage] {
+  body h1[data-editable] {
     letter-spacing: .023em;
     position: relative;
     margin-bottom: 0;
     cursor: default; }
-    body h1[data-localstorage] .code {
+    body h1[data-editable] .code {
       font-family: "Ubuntu Mono", Consolas, Menlo, Monaco, monospace;
       vertical-align: -webkit-calc(5%);
       vertical-align: -moz-calc(5%);
@@ -772,7 +772,7 @@ body {
       color: #37B7B7;
       font-size: .75em;
       padding: 5px 7px; }
-  body p[data-localstorage] {
+  body p[data-editable] {
     letter-spacing: .032em;
     margin: .4em 0 .8em 0;
     position: relative;
@@ -923,7 +923,7 @@ body {
       body .edit__modal.visible#theme_edit .modal_actions #theme_selector {
         padding: 15px 0;
         display: block; }
-        body .edit__modal.visible#theme_edit .modal_actions #theme_selector button[data-localstorage] {
+        body .edit__modal.visible#theme_edit .modal_actions #theme_selector button.theme_btn {
           -webkit-border-radius: 2px;
           -moz-border-radius: 2px;
           -ms-border-radius: 2px;

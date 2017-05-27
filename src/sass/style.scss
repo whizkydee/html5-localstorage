@@ -75,7 +75,7 @@ body {
     }
   }
 
-  h1[data-localstorage] {
+  h1[data-editable] {
     letter-spacing: .023em;
     position: relative;
     margin-bottom: 0;
@@ -91,7 +91,7 @@ body {
     }
   }
 
-  p[data-localstorage] {
+  p[data-editable] {
     letter-spacing: .032em;
     margin: .4em 0 .8em 0;
     position: relative;
@@ -244,7 +244,7 @@ body {
           #theme_selector {
             padding: 15px 0;
             display: block;
-            button[data-localstorage] {
+            button.theme_btn {
               @include border-radius(2px);
               border: 2px solid #cbcbcb;
               margin-bottom: 10px;
