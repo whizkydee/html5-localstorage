@@ -7,57 +7,53 @@
   <link href="dist/css/style.css" rel="stylesheet" type="text/css">
   <script src="dist/js/script.js" type="text/javascript" charset="utf-8"></script>
 </head>
-<body data-localstorage>
+<body data-editable>
   <span class="github_fork">
     <a href="https://github.com/whizkydee/html5-localstorage">Fork me on GitHub</a>
   </span>
   <section class="main_page">
-    <h1 data-localstorage>Hello there. This is a <span class="code">localStorage</span> demo.</h1>
-    <p data-localstorage>Play around with the HTML5 localStorage API</p>
+    <h1 data-editable>Hello there. This is a <span class="code">localStorage</span> demo.</h1>
+    <p data-editable>Play around with the HTML5 localStorage API</p>
     <section class="edit">
       <h3>Edit:</h3>
 
       <button
         type="button"
-        data-localstorage
-        data-desc="This controls the base <span>font-family</span> and <span>font-size</span>"
-        data-label-1="Font Family"
-        data-label-2="Font Size">
+        data-editable
+        data-modal-desc="This controls the base <span>font-family</span> and <span>font-size</span>"
+        data-modal-label="Font Family,Font Size">
         Font
       </button>
 
       <button
         type="button"
-        data-localstorage
-        data-desc="This controls the text <span>color</span> and the <span>body</span> background"
-        data-label-1="Text Color"
-        data-label-2="Body Background">
+        data-editable
+        data-modal-desc="This controls the text <span>color</span> and the <span>body</span> background"
+        data-modal-label="Text Color,Body Background">
         Colors
       </button>
 
       <button
         type="button"
-        data-localstorage
-        data-desc="This modifies the text of the heading and paragraph"
-        data-label-1="Heading"
-        data-label-2="Paragraph">
+        data-editable
+        data-modal-desc="This modifies the text of the heading and paragraph"
+        data-modal-label="Heading,Paragraph">
         Text
       </button>
 
       <button
         type="button"
-        data-localstorage
-        data-desc="This controls the <span>background</span> and <span>:hover</span> of the buttons"
-        data-label-1="Button Background"
-        data-label-2="Button Hover Background">
+        data-editable
+        data-modal-desc="This controls the <span>background</span> and <span>:hover</span> of the buttons"
+        data-modal-label="Button Background,Button Hover Background">
         Buttons
       </button>
 
       <button
         type="button"
-        data-localstorage
-        data-desc="This controls the color scheme of elements on the page"
-        data-label-1="Choose a theme...">
+        data-editable
+        data-modal-desc="This controls the color scheme of elements on the page"
+        data-modal-label="Choose a theme...">
         Theme
       </button>
     </section>
@@ -96,18 +92,18 @@
 
     <section class="modal_actions">
       <label for="input1"></label>
-      <input type="text" id="input1" />
+      <input data-controller type="text" id="input1" />
 
       <label for="input2"></label>
-      <input type="text" id="input2" />
+      <input data-controller type="text" id="input2" />
 
       <section id="theme_selector">
-        <button class="theme_btn" data-localstorage>Teal</button>
-        <button class="theme_btn" data-localstorage>Blue</button>
-        <button class="theme_btn" data-localstorage>Tomato</button>
-        <button class="theme_btn" data-localstorage>BlueViolet</button>
+        <button class="theme_btn">Teal</button>
+        <button class="theme_btn">Blue</button>
+        <button class="theme_btn">Tomato</button>
+        <button class="theme_btn">BlueViolet</button>
 
-        <label for="checkbox">Make button style outset? <input type="checkbox" id="checkbox"></label>
+        <label data-checkbox-controller for="checkbox">Make button style outset? <input type="checkbox" id="checkbox"></label>
       </section>
 
       <section id="user_actions">
