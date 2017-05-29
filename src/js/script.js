@@ -17,21 +17,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Begin loop for [data-editable] buttons.
   const loop = i => {
-    /**
-    * Before doing anything, check first if [data-editable] buttons have
-    * a `disabled` attribute, then remove it. This prevents the buttons from
-    * having a `disabled` attribute when the page is reloaded, therefore making
-    * the buttons inaccessible.
-    */
+    // Before doing anything, check first if [data-editable] buttons have
+    // a `disabled` attribute, then remove it. This prevents the buttons from
+    // having a `disabled` attribute when the page is reloaded, therefore making
+    // the buttons inaccessible.
+
     if (true === btns[i].hasAttribute('disabled')) btns[i].removeAttribute('disabled');
 
     // Function to launch the edit modal and some other stuff.
     function launchModal() {
-      /**
-      * Set a `disabled` attribute on all the [data-editable] buttons
-      * when each button is clicked to launch the edit modal, to avoid
-      * multiple clicks resulting to modal errors.
-      */
+      // Set a `disabled` attribute on all the [data-editable] buttons
+      // when each button is clicked to launch the edit modal, to avoid
+      // multiple clicks resulting to modal errors.
+
       for (let i = 0; i < btns.length; i++) {
         btns[i].setAttribute('disabled', '');
       }
@@ -105,21 +103,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const MODAL_TIMEOUT = 120; // 0.12 seconds
 
-        /**
-        * Reset the modal title to `Edit` if it already has a title inherited
-        * from the button clicked after a timeout.
-        */
+        // Reset the modal title to `Edit` if it already has a title inherited
+        // from the button clicked after a timeout.
+
         if (-1 === modalTitleElem.innerText.indexOf('Edit')) {
           window.setTimeout(() => {
             modalTitleElem.innerText = 'Edit';
           }, MODAL_TIMEOUT);
         }
 
-        /**
-        * Reset the modal description to an empty string if it already has a
-        * description inherited from the [data-modal-desc] attr of the button clicked
-        * after a timeout.
-        */
+        // Reset the modal description to an empty string if it already has a
+        // description inherited from the [data-modal-desc] attr of the button clicked
+        // after a timeout.
+
         if (0 === modalDescElem.innerHTML.length) {
           window.setTimeout(() => {
             modalDescElem.innerHTML = '';
@@ -143,10 +139,9 @@ document.addEventListener('DOMContentLoaded', () => {
         exitModal();
       }, false);
 
-      /**
-      * Add a keydown event listener to the document to detect
-      * when `esc` key is clicked, then exit the modal.
-      */
+      // Add a keydown event listener to the document to detect
+      // when `esc` key is clicked, then exit the modal.
+
       document.addEventListener('keydown', e => {
         if (true === modal.classList.contains('visible')) {
           if (27 === e.keyCode) exitModal();
