@@ -1,4 +1,4 @@
-## [HTML5 Local Storage] (https://whizkydee.github.io/html5-localstorage)
+## [HTML5 Local Storage Demo](https://whizkydee.github.io/html5-localstorage)
 
 An awesome demo of the HTML5 localStorage API with CSS fun.
 
