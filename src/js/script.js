@@ -5,11 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
   var localStorage = (localStorage || window.localStorage);
 
   // Define constants for [data-editable] buttons and modal.
-  const
-    body = document.body,
-    btns = document.querySelectorAll('.edit > button'),
-    modal = document.querySelector('.edit__modal'),
-    clearBtn = document.getElementById('clear');
+  const body = document.body,
+        btns = document.querySelectorAll('.edit > button'),
+        modal = document.querySelector('.edit__modal'),
+        clearBtn = document.getElementById('clear');
 
   // Begin loop for [data-editable] buttons.
   const loop = i => {
@@ -21,22 +20,21 @@ document.addEventListener('DOMContentLoaded', () => {
     if (true === btns[i].hasAttribute('disabled')) btns[i].removeAttribute('disabled');
 
     // Define global variables
-    let
-      modalTitleElem = document.querySelector('.edit__modal > h3'),
-      modalTitle = modalTitleElem.innerText,
-      btnText = btns[i].innerText,
-      btnTextLower = btnText.toLowerCase(),
+    let modalTitleElem = document.querySelector('.edit__modal > h3'),
+        modalTitle = modalTitleElem.innerText,
+        btnText = btns[i].innerText,
+        btnTextLower = btnText.toLowerCase(),
 
-      modalDescElem = document.querySelector('.edit__modal > .edit_text'),
-      modalDesc = modalDescElem.innerText,
-      btnDesc = btns[i].getAttribute('data-modal-desc'),
+        modalDescElem = document.querySelector('.edit__modal > .edit_text'),
+        modalDesc = modalDescElem.innerText,
+        btnDesc = btns[i].getAttribute('data-modal-desc'),
 
-      themeSelector = document.getElementById('theme_selector'),
-      themeBtn = document.querySelectorAll('#theme_selector button'),
-      themes = ['teal', 'tomato', 'blue', 'blueviolet'],
-      outsetOption = document.querySelector('#theme_selector label[for="checkbox"]'),
+        themeSelector = document.getElementById('theme_selector'),
+        themeBtn = document.querySelectorAll('#theme_selector button'),
+        themes = ['teal', 'tomato', 'blue', 'blueviolet'],
+        outsetOption = document.querySelector('#theme_selector label[for="checkbox"]'),
 
-      closeButton = document.getElementById('close_modal');
+        closeButton = document.getElementById('close_modal');
 
     // Function to launch the edit modal and some other stuff.
     function launchModal() {
@@ -129,9 +127,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add a `click` event listener to all [data-editable] buttons and do some stuff.
     btns[i].addEventListener('click', () => {
       launchModal();
-      let
-        labelElem1 = document.querySelector('label[for="input1"]'),
-        labelElem2 = document.querySelector('label[for="input2"]');
+      let labelElem1 = document.querySelector('label[for="input1"]'),
+          labelElem2 = document.querySelector('label[for="input2"]');
       const dataLabel = btns[i].getAttribute('data-modal-label').split(',');
 
       labelElem1.innerText = dataLabel[0];
