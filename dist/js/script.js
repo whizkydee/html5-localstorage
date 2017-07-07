@@ -58,9 +58,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // Loop through the theme selector buttons and add its class to <body>.
       for (var _i2 = 0; _i2 < themeBtn.length; _i2++) {
-        themeBtn[_i2].addEventListener('click', function (e) {
-          var targetTheme = 'theme-' + e.target.innerText.toLowerCase();
-          body.classList = targetTheme;
+        themeBtn[_i2].addEventListener('click', function (event) {
+          var targetTheme = 'theme-' + event.target.innerText.toLowerCase();
+          body.classList.value = targetTheme;
         }, false);
       }
     }
@@ -116,9 +116,9 @@ document.addEventListener('DOMContentLoaded', function () {
       exitModal();
     }, false);
 
-    document.addEventListener('keydown', function (e) {
+    document.addEventListener('keydown', function (event) {
       if (true === modal.classList.contains('visible')) {
-        if (27 === e.keyCode) exitModal();
+        if (27 === event.keyCode) exitModal();
       }
     }, false);
 

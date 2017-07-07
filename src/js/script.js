@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Begin regular document stuff (UI and functions).
 
-  var localStorage = (localStorage || window.localStorage);
+  var localStorage = localStorage || window.localStorage;
 
   // Define constants for [data-editable] buttons and modal.
   const body = document.body,
@@ -59,9 +59,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Loop through the theme selector buttons and add its class to <body>.
       for (let i = 0; i < themeBtn.length; i++) {
-        themeBtn[i].addEventListener('click', e => {
-          let targetTheme = `theme-${e.target.innerText.toLowerCase()}`;
-          body.classList = targetTheme;
+        themeBtn[i].addEventListener('click', event => {
+          let targetTheme = `theme-${event.target.innerText.toLowerCase()}`;
+          body.classList.value = targetTheme;
         }, false);
       }
 
@@ -118,9 +118,9 @@ document.addEventListener('DOMContentLoaded', () => {
       exitModal();
     }, false);
 
-    document.addEventListener('keydown', e => {
+    document.addEventListener('keydown', event => {
       if (true === modal.classList.contains('visible')) {
-        if (27 === e.keyCode) exitModal();
+        if (27 === event.keyCode) exitModal();
       }
     }, false);
 
